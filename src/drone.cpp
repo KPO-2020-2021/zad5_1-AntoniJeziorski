@@ -38,23 +38,46 @@ void Drone::VerticalFlight(Vector3D translation, PzG::LaczeDoGNUPlota& Link) {
     {
         location = location + translation/FLOPS;
         body.ToGlobal(location);
-        SaveBody("../datasets/prostokat.dat");
+        SaveBody("../datasets/body.dat");
         Link.Rysuj(); // <- Tutaj gnuplot rysuje, to co zapisaliśmy do pliku
         usleep(10000);
     }
 
 }
-/* 
-void Drone::HorizontalFlight(Vector3D translation, PzG::LaczeDoGNUPlota& Link) {
 
+void Drone::HorizontalFlight(double distance, PzG::LaczeDoGNUPlota& Link) {
 
-    location = location + translation;
+    Vector3D BodyCenter, tmp, end;
 
-    body.ToGlobal(location);
+    end[0] = distance;
 
+    BodyCenter = body(0) + body(5);
+    BodyCenter = BodyCenter/2;
 
+    end = RotationMatrix_Z(rotationAngle) * end + BodyCenter;
 
-} */
+    tmp = end - BodyCenter;
+    tmp[2] = 0;
+
+    for (int i = 0; i < 200; ++i)
+    {
+        body.Rotate(rotationAngle/200);
+        body.ToGlobal(location);
+        SaveBody("../datasets/body.dat");
+        Link.Rysuj(); // <- Tutaj gnuplot rysuje, to co zapisaliśmy do pliku
+        usleep(10000);
+    }
+
+    for (int i = 0; i < FLOPS; i++)
+    {
+        location = location + tmp/FLOPS;
+        body.ToGlobal(location);
+        SaveBody("../datasets/body.dat");
+        Link.Rysuj(); // <- Tutaj gnuplot rysuje, to co zapisaliśmy do pliku
+        usleep(10000);
+    }
+
+} 
 
 void Drone::PlanPath(double angle, double distance) {
 

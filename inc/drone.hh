@@ -21,7 +21,7 @@ class Drone {
 
         void VerticalFlight(Vector3D translation, PzG::LaczeDoGNUPlota& Link);
 
-       /*  void HorizontalFlight(Vector3D translation, PzG::LaczeDoGNUPlota& Link); */
+        void HorizontalFlight(double distance, PzG::LaczeDoGNUPlota& Link);
 
         void PlanPath(double angle, double distance); 
 
