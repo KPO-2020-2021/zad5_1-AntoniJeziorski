@@ -3,6 +3,7 @@
 #include "vector3D.hh"
 #include "size.hh"
 #include <iostream>
+#include <string>
 
 class Solid {
 
@@ -10,8 +11,12 @@ class Solid {
 
         Vector3D scaleVector;
 
+        std::string filename;
+
         Solid();
 
-        void scale(const Vector3D& s);
+        void Scale(const Vector3D& s);
+
+        std::string GetFilename();
 
 };

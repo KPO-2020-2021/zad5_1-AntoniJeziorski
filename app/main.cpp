@@ -12,18 +12,24 @@
 #include <fstream>
 #include <string>
 
-#include "exampleConfig.h"
+#include "exampleConfig.h.in"
+#include "solid.hh"
+#include "cuboid.hh"
+#include "drone.hh"
 #include "example.h"
 #include "vector3D.hh"
 #include "matrix3D.hh"
 #include "../inc/lacze_do_gnuplota.hh"
 
-
 int main() {
 
+    double tab[3] = {10,8,6}, tab2[3] = {0,0,80}, l[3] = {20,20,3}, t[3] = {0,0,-50}, h[3] = {79, 80, 0} ;
+    Vector3D v(tab), tr(tab2), loc(l), tr2(t), hor(h);
+
+    Drone dron(v,loc);
+
+
     
-
-
 
     PzG::LaczeDoGNUPlota  Lacze;  // Ta zmienna jest potrzebna do wizualizacji
                                 // rysunku prostokata
@@ -34,27 +40,45 @@ int main() {
    //  na dwa sposoby:
    //   1. Rysowane jako linia ciagl o grubosci 2 piksele
    //
-  Lacze.DodajNazwePliku("../datasets/prostokat.dat",PzG::RR_Ciagly,2);
+    Lacze.DodajNazwePliku("../datasets/prostokat.dat",PzG::RR_Ciagly,2);
+    Lacze.DodajNazwePliku("../datasets/plaszczyzna.dat",PzG::RR_Ciagly,2);
+    
    //
    //  Ustawienie trybu rysowania 2D, tzn. rysowany zbiór punktów
    //  znajduje się na wspólnej płaszczyźnie. Z tego powodu powoduj
    //  jako wspolrzedne punktow podajemy tylko x,y.
    //
-  Lacze.ZmienTrybRys(PzG::TR_3D);
+    Lacze.ZmienTrybRys(PzG::TR_3D);
 
-  PrzykladZapisuWspolrzednychDoStrumienia(std::cout,0);
-  if (!PrzykladZapisuWspolrzednychDoPliku("../datasets/prostokat.dat",0)) return 1;
-  Lacze.Rysuj(); // <- Tutaj gnuplot rysuje, to co zapisaliśmy do pliku
-  std::cout << "Naciśnij ENTER, aby kontynuowac" << std::endl;
-  std::cin.ignore(100000,'\n');
-   //----------------------------------------------------------
-   // Ponownie wypisuje wspolrzedne i rysuje prostokąt w innym miejscu.
-   //
-  PrzykladZapisuWspolrzednychDoStrumienia(std::cout,50);
-  if (!PrzykladZapisuWspolrzednychDoPliku("../datasets/prostokat.dat",50)) return 1;
-  Lacze.Rysuj(); // <- Tutaj gnuplot rysuje, to co zapisaliśmy do pliku
-  std::cout << "Naciśnij ENTER, aby kontynuowac" << std::endl;
-  std::cin.ignore(100000,'\n');
+    Lacze.UstawZakresY(0,200);
+    Lacze.UstawZakresX(0,200);
+    Lacze.UstawZakresZ(0,150);
 
-  return 0;
+    dron.SaveBody("../datasets/prostokat.dat");
+  
+    Lacze.Rysuj(); // <- Tutaj gnuplot rysuje, to co zapisaliśmy do pliku
+
+    std::cout << "Naciśnij ENTER, aby kontynuowac" << std::endl;
+    std::cin.ignore(100000,'\n');
+    
+    Lacze.DodajNazwePliku("../datasets/path.dat", PzG::RR_Ciagly,2);
+    dron.PlanPath(45, 100);
+    Lacze.Rysuj();
+    std::cout << "Naciśnij ENTER, aby kontynuowac" << std::endl;
+    std::cin.ignore(100000,'\n');
+
+    dron.VerticalFlight(tr, Lacze);
+    
+    std::cout << "Naciśnij ENTER, aby kontynuowac" << std::endl;
+    std::cin.ignore(100000,'\n');
+
+    
+
+    std::cout << "Naciśnij ENTER, aby kontynuowac" << std::endl;
+    std::cin.ignore(100000,'\n');
+
+    
+
+    return 0;
+
 }

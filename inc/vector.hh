@@ -234,7 +234,7 @@ template <unsigned int Size>
 const double &Vector<Size>::operator [] (unsigned int index) const {
     if (index < 0 || index >= Size) {
         throw std::runtime_error("Error: Wektor jest poza zasiegiem!");
-    }
+    } 
     return size[index];
 }
 

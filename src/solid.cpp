@@ -2,18 +2,24 @@
 
 Solid::Solid() {
 
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < SIZE; ++i)
     {
          scaleVector[i] = 1;
     }
     
 }
 
-void Solid::scale(const Vector3D& s) {
+void Solid::Scale(const Vector3D& s) {
 
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < SIZE; i++)
     {
         scaleVector[i] = scaleVector[i] * s[i];
     }
+
+}
+
+std::string Solid::GetFilename() {
+
+    return filename;
 
 }
