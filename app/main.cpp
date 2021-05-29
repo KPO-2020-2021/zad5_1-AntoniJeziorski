@@ -40,9 +40,18 @@ int main() {
    //  na dwa sposoby:
    //   1. Rysowane jako linia ciagl o grubosci 2 piksele
    //
-    Lacze.DodajNazwePliku("../datasets/body.dat",PzG::RR_Ciagly,2);
-    Lacze.DodajNazwePliku("../datasets/plaszczyzna.dat",PzG::RR_Ciagly,2);
+    Lacze.DodajNazwePliku("../datasets/body.dat",PzG::SR_Ciagly);
+    PzG::InfoPlikuDoRysowania *bodyInfo = &Lacze.DodajNazwePliku("../datasets/body.dat");
+    bodyInfo->ZmienKolor(1);
+    bodyInfo->ZmienSzerokosc(3);
+
+    Lacze.DodajNazwePliku("../datasets/bed.dat",PzG::SR_Ciagly);
+    PzG::InfoPlikuDoRysowania *bedInfo = &Lacze.DodajNazwePliku("../datasets/bed.dat");
+    bedInfo->ZmienKolor(2);
+    bedInfo->ZmienSzerokosc(1);
     
+    
+
    //
    //  Ustawienie trybu rysowania 2D, tzn. rysowany zbiór punktów
    //  znajduje się na wspólnej płaszczyźnie. Z tego powodu powoduj
@@ -61,7 +70,11 @@ int main() {
     std::cout << "Naciśnij ENTER, aby kontynuowac" << std::endl;
     std::cin.ignore(100000,'\n');
 
-    Lacze.DodajNazwePliku("../datasets/path.dat", PzG::RR_Ciagly,2);
+    Lacze.DodajNazwePliku("../datasets/path.dat", PzG::SR_Ciagly);
+    PzG::InfoPlikuDoRysowania *pathInfo = &Lacze.DodajNazwePliku("../datasets/path.dat");
+    pathInfo->ZmienKolor(4);
+    pathInfo->ZmienSzerokosc(1);
+
     dron.PlanPath(45, 100);
     Lacze.Rysuj();
     std::cout << "Naciśnij ENTER, aby kontynuowac" << std::endl;
@@ -79,6 +92,11 @@ int main() {
 
     dron.VerticalFlight(tr2, Lacze);
     
+    std::cout << "Naciśnij ENTER, aby kontynuowac" << std::endl;
+    std::cin.ignore(100000,'\n');
+
+
+
     std::cout << "Naciśnij ENTER, aby kontynuowac" << std::endl;
     std::cin.ignore(100000,'\n');
 
