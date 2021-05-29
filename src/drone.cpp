@@ -1,5 +1,9 @@
 #include "drone.hh"
 
+Drone::Drone() {
+
+}
+
 Drone::Drone(Vector3D scale, Vector3D loc) {
     
     location = loc;
@@ -32,20 +36,26 @@ bool Drone::SaveBody( const char *sFileName) {
     return !FileStream.fail();
 }
 
-void Drone::VerticalFlight(Vector3D translation, PzG::LaczeDoGNUPlota& Link) {
+void Drone::VerticalFlight(Vector3D translation, PzG::LaczeDoGNUPlota& Link, int droneNumber) {
+
+    std::string filename;
+    filename = "../datasets/body" + std::to_string(droneNumber) + ".dat";
 
     for (int i = 0; i < FLOPS; i++)
     {
         location = location + translation/FLOPS;
         body.ToGlobal(location);
-        SaveBody("../datasets/body.dat");
+        SaveBody(filename.c_str());
         Link.Rysuj(); // <- Tutaj gnuplot rysuje, to co zapisaliśmy do pliku
         usleep(10000);
     }
 
 }
 
-void Drone::HorizontalFlight(double distance, PzG::LaczeDoGNUPlota& Link) {
+void Drone::HorizontalFlight(double distance, double angle, PzG::LaczeDoGNUPlota& Link, int droneNumber) {
+
+    std::string filename;
+    filename = "../datasets/body" + std::to_string(droneNumber) + ".dat";
 
     Vector3D BodyCenter, tmp, end;
 
@@ -59,11 +69,11 @@ void Drone::HorizontalFlight(double distance, PzG::LaczeDoGNUPlota& Link) {
     tmp = end - BodyCenter;
     tmp[2] = 0;
 
-    for (int i = 0; i < 200; ++i)
+    for (int i = 0; i < FLOPS; ++i)
     {
-        body.Rotate(rotationAngle/200);
+        body.Rotate(angle/FLOPS);
         body.ToGlobal(location);
-        SaveBody("../datasets/body.dat");
+        SaveBody(filename.c_str());
         Link.Rysuj(); // <- Tutaj gnuplot rysuje, to co zapisaliśmy do pliku
         usleep(10000);
     }
@@ -72,7 +82,7 @@ void Drone::HorizontalFlight(double distance, PzG::LaczeDoGNUPlota& Link) {
     {
         location = location + tmp/FLOPS;
         body.ToGlobal(location);
-        SaveBody("../datasets/body.dat");
+        SaveBody(filename.c_str());
         Link.Rysuj(); // <- Tutaj gnuplot rysuje, to co zapisaliśmy do pliku
         usleep(10000);
     }
@@ -81,7 +91,7 @@ void Drone::HorizontalFlight(double distance, PzG::LaczeDoGNUPlota& Link) {
 
 void Drone::PlanPath(double angle, double distance) {
 
-    rotationAngle = angle;
+    rotationAngle = rotationAngle + angle;
 
     std::ofstream FileStream;    
     FileStream.open("../datasets/path.dat");
@@ -103,9 +113,10 @@ void Drone::PlanPath(double angle, double distance) {
     FileStream << tmp << std::endl;
 
     tmp[2] = tmp[2] - 80;
-    
+
     FileStream << tmp << std::endl;
 
     FileStream.close();
 
+    
 }

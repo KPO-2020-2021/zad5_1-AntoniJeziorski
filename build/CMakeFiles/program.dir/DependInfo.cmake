@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/src/example.cpp" "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/CMakeFiles/program.dir/src/example.cpp.o"
   "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/src/lacze_do_gnuplota.cpp" "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o"
   "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/src/matrix3D.cpp" "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/CMakeFiles/program.dir/src/matrix3D.cpp.o"
+  "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/src/scene.cpp" "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/CMakeFiles/program.dir/src/scene.cpp.o"
   "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/src/solid.cpp" "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/CMakeFiles/program.dir/src/solid.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

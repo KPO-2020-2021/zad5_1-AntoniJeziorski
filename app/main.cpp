@@ -19,19 +19,22 @@
 #include "example.h"
 #include "vector3D.hh"
 #include "matrix3D.hh"
+#include "scene.hh"
 #include "../inc/lacze_do_gnuplota.hh"
 
 int main() {
 
-    double tab[3] = {10,8,6}, tab2[3] = {0,0,80}, l[3] = {20,20,3}, t[3] = {0,0,-80}, h[3] = {79, 80, 0} ;
-    Vector3D v(tab), tr(tab2), loc(l), tr2(t), hor(h);
+    double tab[3] = {10,8,6}, tab2[3] = {0,0,80}, l1[3] = {20,20,3}, l2[3] = {50,20,3}, t[3] = {0,0,-80}, h[3] = {79, 80, 0}, angle, distance;
+    Vector3D v(tab), tr(tab2), loc1(l1), tr2(t), hor(h), loc2(l2);
 
-    Drone dron(v,loc);
+    Drone d1(v,loc1), d2(v, loc2);
+    int droneNumber = 1;
 
+    Scene scene(d1,d2);
 
-    
+    char option = '0';
 
-    PzG::LaczeDoGNUPlota  Lacze;  // Ta zmienna jest potrzebna do wizualizacji
+    PzG::LaczeDoGNUPlota  Link;  // Ta zmienna jest potrzebna do wizualizacji
                                 // rysunku prostokata
 
    //-------------------------------------------------------
@@ -40,13 +43,18 @@ int main() {
    //  na dwa sposoby:
    //   1. Rysowane jako linia ciagl o grubosci 2 piksele
    //
-    Lacze.DodajNazwePliku("../datasets/body.dat",PzG::SR_Ciagly);
-    PzG::InfoPlikuDoRysowania *bodyInfo = &Lacze.DodajNazwePliku("../datasets/body.dat");
-    bodyInfo->ZmienKolor(1);
-    bodyInfo->ZmienSzerokosc(3);
+   
+    PzG::InfoPlikuDoRysowania *body1Info = &Link.DodajNazwePliku("../datasets/body1.dat");
+    body1Info->ZmienKolor(1);
+    body1Info->ZmienSzerokosc(3);
 
-    Lacze.DodajNazwePliku("../datasets/bed.dat",PzG::SR_Ciagly);
-    PzG::InfoPlikuDoRysowania *bedInfo = &Lacze.DodajNazwePliku("../datasets/bed.dat");
+    PzG::InfoPlikuDoRysowania *body2Info = &Link.DodajNazwePliku("../datasets/body2.dat");
+    body2Info->ZmienKolor(1);
+    body2Info->ZmienSzerokosc(3);
+
+
+  
+    PzG::InfoPlikuDoRysowania *bedInfo = &Link.DodajNazwePliku("../datasets/bed.dat");
     bedInfo->ZmienKolor(2);
     bedInfo->ZmienSzerokosc(1);
     
@@ -57,48 +65,73 @@ int main() {
    //  znajduje się na wspólnej płaszczyźnie. Z tego powodu powoduj
    //  jako wspolrzedne punktow podajemy tylko x,y.
    //
-    Lacze.ZmienTrybRys(PzG::TR_3D);
+    Link.ZmienTrybRys(PzG::TR_3D);
 
-    Lacze.UstawZakresY(0,200);
-    Lacze.UstawZakresX(0,200);
-    Lacze.UstawZakresZ(0,150);
+    Link.UstawZakresY(0,200);
+    Link.UstawZakresX(0,200);
+    Link.UstawZakresZ(0,150);
 
-    dron.SaveBody("../datasets/body.dat");
+
+    scene.GetDrone(0).SaveBody("../datasets/body1.dat");
+    scene.GetDrone(1).SaveBody("../datasets/body2.dat");
   
-    Lacze.Rysuj(); // <- Tutaj gnuplot rysuje, to co zapisaliśmy do pliku
+    Link.Rysuj(); // <- Tutaj gnuplot rysuje, to co zapisaliśmy do pliku
 
-    std::cout << "Naciśnij ENTER, aby kontynuowac" << std::endl;
-    std::cin.ignore(100000,'\n');
+    while(option != 'k') { // Dopoki nie zostanie podane k
 
-    Lacze.DodajNazwePliku("../datasets/path.dat", PzG::SR_Ciagly);
-    PzG::InfoPlikuDoRysowania *pathInfo = &Lacze.DodajNazwePliku("../datasets/path.dat");
-    pathInfo->ZmienKolor(4);
-    pathInfo->ZmienSzerokosc(1);
+        if(option == '0') //
+        {
+            std::cout << "a - wybierz aktywnego drona" << std::endl;
+            std::cout << "p - zadaj parametry przelotu" << std::endl;
+            std::cout << "m - wyswietl menu" << std::endl;
+            std::cout << std::endl;
+            std::cout << "k - koniec dzialania programu" << std::endl;
+        }
 
-    dron.PlanPath(45, 100);
-    Lacze.Rysuj();
-    std::cout << "Naciśnij ENTER, aby kontynuowac" << std::endl;
-    std::cin.ignore(100000,'\n');
+        std::cout << "Twoj wybor: " << std::endl;
+        std::cin >> option;
 
-    dron.VerticalFlight(tr, Lacze);
-    
-    std::cout << "Naciśnij ENTER, aby kontynuowac" << std::endl;
-    std::cin.ignore(100000,'\n');
+        switch(option) {
+            case 'k':
 
-    dron.HorizontalFlight(100 ,Lacze);
+                option = 'k'; break;
 
-    std::cout << "Naciśnij ENTER, aby kontynuowac" << std::endl;
-    std::cin.ignore(100000,'\n');
+            case 'p':
 
-    dron.VerticalFlight(tr2, Lacze);
-    
-    std::cout << "Naciśnij ENTER, aby kontynuowac" << std::endl;
-    std::cin.ignore(100000,'\n');
+                std::cout << "Podaj kierunek lotu (kat w stopniach)" << std::endl;
+                std::cin >> angle;
+                std::cout << "Podaj dlugosc lotu" << std::endl;
+                std::cin >> distance;
 
+                Link.DodajNazwePliku("../datasets/path.dat");
+                scene.UseDrone(droneNumber-1).PlanPath(angle, distance);
+                Link.Rysuj();
 
+                scene.UseDrone(droneNumber-1).VerticalFlight(tr, Link, droneNumber);
+                scene.UseDrone(droneNumber-1).HorizontalFlight(distance, angle, Link, droneNumber);
+                scene.UseDrone(droneNumber-1).VerticalFlight(tr2, Link, droneNumber);
 
-    std::cout << "Naciśnij ENTER, aby kontynuowac" << std::endl;
-    std::cin.ignore(100000,'\n');
+                Link.UsunNazwePliku("../datasets/path.dat");
+                Link.Rysuj();
+
+                break;
+
+            case 'm':
+
+                option = '0';
+
+                break;
+            case 'a':
+
+                std::cout << "Podaj numer drona" << std::endl;
+                std::cin >> droneNumber;
+
+                break;
+            default:
+                option = '0';
+                std::cerr << "!!! NIEPOPRAWNA OPCJA !!!" << std::endl; break;
+        }
+    }
 
     return 0;
 

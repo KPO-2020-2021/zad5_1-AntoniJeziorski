@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/program.dir/src/example.cpp.o"
   "CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o"
   "CMakeFiles/program.dir/src/matrix3D.cpp.o"
+  "CMakeFiles/program.dir/src/scene.cpp.o"
   "CMakeFiles/program.dir/src/solid.cpp.o"
 )
 

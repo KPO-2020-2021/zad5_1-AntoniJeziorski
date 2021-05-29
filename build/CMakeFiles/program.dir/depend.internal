@@ -34,6 +34,18 @@ CMakeFiles/program.dir/src/matrix3D.cpp.o
  ../inc/size.hh
  ../inc/vector.hh
  /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/src/matrix3D.cpp
+CMakeFiles/program.dir/src/scene.cpp.o
+ ../inc/cuboid.hh
+ ../inc/drone.hh
+ ../inc/lacze_do_gnuplota.hh
+ ../inc/matrix.hh
+ ../inc/matrix3D.hh
+ ../inc/scene.hh
+ ../inc/size.hh
+ ../inc/solid.hh
+ ../inc/vector.hh
+ ../inc/vector3D.hh
+ /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/src/scene.cpp
 CMakeFiles/program.dir/src/solid.cpp.o
  ../inc/size.hh
  ../inc/solid.hh

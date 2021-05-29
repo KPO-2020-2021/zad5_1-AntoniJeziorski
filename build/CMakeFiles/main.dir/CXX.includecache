@@ -52,6 +52,10 @@ cmath
 matrix.hh
 ../inc/matrix.hh
 
+../inc/scene.hh
+drone.hh
+../inc/drone.hh
+
 ../inc/size.hh
 
 ../inc/solid.hh
@@ -103,6 +107,8 @@ vector3D.hh
 /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/app/vector3D.hh
 matrix3D.hh
 /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/app/matrix3D.hh
+scene.hh
+/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/app/scene.hh
 ../inc/lacze_do_gnuplota.hh
 /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/inc/lacze_do_gnuplota.hh
 

@@ -9,8 +9,6 @@ class Cuboid: public Solid {
 
     Vector3D globalCorners[8];
 
-    Vector3D standardCorners[8];
-
     Vector3D location;
 
     double rotationAngle;

@@ -725,6 +725,33 @@ src/matrix3D.cpp.s:
 	$(MAKE) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/matrix3D.cpp.s
 .PHONY : src/matrix3D.cpp.s
 
+src/scene.o: src/scene.cpp.o
+
+.PHONY : src/scene.o
+
+# target to build an object file
+src/scene.cpp.o:
+	$(MAKE) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/scene.cpp.o
+.PHONY : src/scene.cpp.o
+
+src/scene.i: src/scene.cpp.i
+
+.PHONY : src/scene.i
+
+# target to preprocess a source file
+src/scene.cpp.i:
+	$(MAKE) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/scene.cpp.i
+.PHONY : src/scene.cpp.i
+
+src/scene.s: src/scene.cpp.s
+
+.PHONY : src/scene.s
+
+# target to generate assembly for a file
+src/scene.cpp.s:
+	$(MAKE) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/scene.cpp.s
+.PHONY : src/scene.cpp.s
+
 src/solid.o: src/solid.cpp.o
 
 .PHONY : src/solid.o
@@ -813,6 +840,9 @@ help:
 	@echo "... src/matrix3D.o"
 	@echo "... src/matrix3D.i"
 	@echo "... src/matrix3D.s"
+	@echo "... src/scene.o"
+	@echo "... src/scene.i"
+	@echo "... src/scene.s"
 	@echo "... src/solid.o"
 	@echo "... src/solid.i"
 	@echo "... src/solid.s"

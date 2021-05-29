@@ -35,6 +35,11 @@
   "file": "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/src/solid.cpp"
 },
 {
+  "directory": "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build -I/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/inc -I/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/scene.cpp.o -c /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/src/scene.cpp",
+  "file": "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/src/scene.cpp"
+},
+{
   "directory": "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/tests",
   "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build -I/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/inc -I/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/unit_tests.dir/main.cpp.o -c /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/tests/main.cpp",
   "file": "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/tests/main.cpp"

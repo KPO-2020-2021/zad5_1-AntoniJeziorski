@@ -44,6 +44,7 @@ set(SOURCES          # All .cpp files in src/
     src/drone.cpp
     src/matrix3D.cpp
     src/solid.cpp
+    src/scene.cpp
 )
 set(TESTFILES        # All .cpp files in tests/
     tests/main.cpp
