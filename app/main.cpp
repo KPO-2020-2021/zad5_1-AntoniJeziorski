@@ -24,10 +24,10 @@
 
 int main() {
 
-    double tab[3] = {10,8,6}, tab2[3] = {0,0,80}, l1[3] = {20,20,3}, l2[3] = {50,20,3}, t[3] = {0,0,-80}, h[3] = {79, 80, 0}, angle, distance;
-    Vector3D v(tab), tr(tab2), loc1(l1), tr2(t), hor(h), loc2(l2);
+    double tab[3] = {10,8,6}, tab2[3] = {0,0,80}, l1[3] = {20,20,3}, l2[3] = {50,20,3}, t[3] = {0,0,-80}, h[3] = {79, 80, 0}, r[3] = {7,7,2}, angle, distance;
+    Vector3D v(tab), tr(tab2), loc1(l1), tr2(t), hor(h), loc2(l2), rot(r);
 
-    Drone d1(v,loc1), d2(v, loc2);
+    Drone d1(v,rot, loc1), d2(v, rot, loc2);
     int droneNumber = 1;
 
     Scene scene(d1,d2);
@@ -48,12 +48,42 @@ int main() {
     body1Info->ZmienKolor(1);
     body1Info->ZmienSzerokosc(3);
 
+    PzG::InfoPlikuDoRysowania *rotor1_1Info = &Link.DodajNazwePliku("../datasets/rotor0_1.dat");
+    rotor1_1Info->ZmienKolor(1);
+    rotor1_1Info->ZmienSzerokosc(3);
+
+    PzG::InfoPlikuDoRysowania *rotor2_1Info = &Link.DodajNazwePliku("../datasets/rotor1_1.dat");
+    rotor2_1Info->ZmienKolor(1);
+    rotor2_1Info->ZmienSzerokosc(3);
+
+    PzG::InfoPlikuDoRysowania *rotor3_1Info = &Link.DodajNazwePliku("../datasets/rotor2_1.dat");
+    rotor3_1Info->ZmienKolor(1);
+    rotor3_1Info->ZmienSzerokosc(3);
+
+    PzG::InfoPlikuDoRysowania *rotor4_1Info = &Link.DodajNazwePliku("../datasets/rotor3_1.dat");
+    rotor4_1Info->ZmienKolor(1);
+    rotor4_1Info->ZmienSzerokosc(3);
+
+    PzG::InfoPlikuDoRysowania *rotor1_2Info = &Link.DodajNazwePliku("../datasets/rotor0_2.dat");
+    rotor1_2Info->ZmienKolor(1);
+    rotor1_2Info->ZmienSzerokosc(3);
+
+    PzG::InfoPlikuDoRysowania *rotor2_2Info = &Link.DodajNazwePliku("../datasets/rotor1_2.dat");
+    rotor2_2Info->ZmienKolor(1);
+    rotor2_2Info->ZmienSzerokosc(3);
+
+    PzG::InfoPlikuDoRysowania *rotor3_2Info = &Link.DodajNazwePliku("../datasets/rotor2_2.dat");
+    rotor3_2Info->ZmienKolor(1);
+    rotor3_2Info->ZmienSzerokosc(3);
+
+    PzG::InfoPlikuDoRysowania *rotor4_2Info = &Link.DodajNazwePliku("../datasets/rotor3_2.dat");
+    rotor4_2Info->ZmienKolor(1);
+    rotor4_2Info->ZmienSzerokosc(3);
+
     PzG::InfoPlikuDoRysowania *body2Info = &Link.DodajNazwePliku("../datasets/body2.dat");
     body2Info->ZmienKolor(1);
     body2Info->ZmienSzerokosc(3);
 
-
-  
     PzG::InfoPlikuDoRysowania *bedInfo = &Link.DodajNazwePliku("../datasets/bed.dat");
     bedInfo->ZmienKolor(2);
     bedInfo->ZmienSzerokosc(1);
@@ -72,15 +102,15 @@ int main() {
     Link.UstawZakresZ(0,150);
 
 
-    scene.GetDrone(0).SaveBody("../datasets/body1.dat");
-    scene.GetDrone(1).SaveBody("../datasets/body2.dat");
+    scene.GetDrone(0).SaveDrone(1);
+    scene.GetDrone(1).SaveDrone(2);
   
     Link.Rysuj(); // <- Tutaj gnuplot rysuje, to co zapisaliśmy do pliku
 
     while(option != 'k') { // Dopoki nie zostanie podane k
 
-        if(option == '0') //
-        {
+        if(option == '0') { 
+        
             std::cout << "a - wybierz aktywnego drona" << std::endl;
             std::cout << "p - zadaj parametry przelotu" << std::endl;
             std::cout << "m - wyswietl menu" << std::endl;
@@ -105,11 +135,16 @@ int main() {
 
                 Link.DodajNazwePliku("../datasets/path.dat");
                 scene.UseDrone(droneNumber-1).PlanPath(angle, distance);
+                std::cout << "Planuje sciezke..." << std::endl;
+                usleep(1000000);
                 Link.Rysuj();
-
+                
+                std::cout << "Wznoszenie..." << std::endl;
                 scene.UseDrone(droneNumber-1).VerticalFlight(tr, Link, droneNumber);
+                std::cout << "Lot..." << std::endl;
                 scene.UseDrone(droneNumber-1).HorizontalFlight(distance, angle, Link, droneNumber);
                 scene.UseDrone(droneNumber-1).VerticalFlight(tr2, Link, droneNumber);
+                std::cout << "Dron wyladowal..." << std::endl;
 
                 Link.UsunNazwePliku("../datasets/path.dat");
                 Link.Rysuj();

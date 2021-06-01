@@ -25,4 +25,6 @@ class Cuboid: public Solid {
 
         void Rotate(double angle);
 
+        double GetRotationAngle();
+
 };

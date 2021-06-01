@@ -17,6 +17,8 @@ lacze_do_gnuplota.hh
 ../inc/lacze_do_gnuplota.hh
 cuboid.hh
 ../inc/cuboid.hh
+hexagonal_prism.hh
+../inc/hexagonal_prism.hh
 unistd.h
 -
 fstream
@@ -27,6 +29,12 @@ fstream
 ../tests/doctest/doctest.h
 
 ../inc/exampleConfig.h.in
+
+../inc/hexagonal_prism.hh
+solid.hh
+../inc/solid.hh
+matrix3D.hh
+../inc/matrix3D.hh
 
 ../inc/lacze_do_gnuplota.hh
 string

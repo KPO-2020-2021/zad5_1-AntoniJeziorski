@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/src/cuboid.cpp" "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/CMakeFiles/program.dir/src/cuboid.cpp.o"
   "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/src/drone.cpp" "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/CMakeFiles/program.dir/src/drone.cpp.o"
   "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/src/example.cpp" "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/CMakeFiles/program.dir/src/example.cpp.o"
+  "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/src/hexagonal_prism.cpp" "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/CMakeFiles/program.dir/src/hexagonal_prism.cpp.o"
   "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/src/lacze_do_gnuplota.cpp" "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o"
   "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/src/matrix3D.cpp" "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/CMakeFiles/program.dir/src/matrix3D.cpp.o"
   "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/src/scene.cpp" "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/CMakeFiles/program.dir/src/scene.cpp.o"

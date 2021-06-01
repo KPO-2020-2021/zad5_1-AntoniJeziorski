@@ -2,6 +2,8 @@
 
 Solid::Solid() {
 
+    filename = "../datasets/";
+
     for (int i = 0; i < SIZE; ++i)
     {
          scaleVector[i] = 1;

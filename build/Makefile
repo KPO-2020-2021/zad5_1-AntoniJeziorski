@@ -671,6 +671,33 @@ src/example.cpp.s:
 	$(MAKE) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/example.cpp.s
 .PHONY : src/example.cpp.s
 
+src/hexagonal_prism.o: src/hexagonal_prism.cpp.o
+
+.PHONY : src/hexagonal_prism.o
+
+# target to build an object file
+src/hexagonal_prism.cpp.o:
+	$(MAKE) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/hexagonal_prism.cpp.o
+.PHONY : src/hexagonal_prism.cpp.o
+
+src/hexagonal_prism.i: src/hexagonal_prism.cpp.i
+
+.PHONY : src/hexagonal_prism.i
+
+# target to preprocess a source file
+src/hexagonal_prism.cpp.i:
+	$(MAKE) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/hexagonal_prism.cpp.i
+.PHONY : src/hexagonal_prism.cpp.i
+
+src/hexagonal_prism.s: src/hexagonal_prism.cpp.s
+
+.PHONY : src/hexagonal_prism.s
+
+# target to generate assembly for a file
+src/hexagonal_prism.cpp.s:
+	$(MAKE) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/hexagonal_prism.cpp.s
+.PHONY : src/hexagonal_prism.cpp.s
+
 src/lacze_do_gnuplota.o: src/lacze_do_gnuplota.cpp.o
 
 .PHONY : src/lacze_do_gnuplota.o
@@ -834,6 +861,9 @@ help:
 	@echo "... src/example.o"
 	@echo "... src/example.i"
 	@echo "... src/example.s"
+	@echo "... src/hexagonal_prism.o"
+	@echo "... src/hexagonal_prism.i"
+	@echo "... src/hexagonal_prism.s"
 	@echo "... src/lacze_do_gnuplota.o"
 	@echo "... src/lacze_do_gnuplota.i"
 	@echo "... src/lacze_do_gnuplota.s"

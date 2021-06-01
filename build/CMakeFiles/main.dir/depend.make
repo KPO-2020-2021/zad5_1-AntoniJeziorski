@@ -5,6 +5,7 @@ CMakeFiles/main.dir/app/main.cpp.o: ../inc/cuboid.hh
 CMakeFiles/main.dir/app/main.cpp.o: ../inc/drone.hh
 CMakeFiles/main.dir/app/main.cpp.o: ../inc/example.h
 CMakeFiles/main.dir/app/main.cpp.o: ../inc/exampleConfig.h.in
+CMakeFiles/main.dir/app/main.cpp.o: ../inc/hexagonal_prism.hh
 CMakeFiles/main.dir/app/main.cpp.o: ../inc/lacze_do_gnuplota.hh
 CMakeFiles/main.dir/app/main.cpp.o: ../inc/matrix.hh
 CMakeFiles/main.dir/app/main.cpp.o: ../inc/matrix3D.hh

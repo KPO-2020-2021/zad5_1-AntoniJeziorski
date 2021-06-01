@@ -24,16 +24,16 @@ void Cuboid::ToGlobal(Vector3D Translation) {
 
     Matrix3D Rotation = RotationMatrix_Z(rotationAngle);
 
-    for (int i = 0; i < CUBE; ++i)
-    {
-        for (int j = 0; j < SIZE; ++j)
-        {
+    for (int i = 0; i < CUBE; ++i) {
+    
+        for (int j = 0; j < SIZE; ++j) {
+        
             globalCorners[i][j] = localCorners[i][j] * scaleVector[j];
         }
     }
 
-    for (int i = 0; i < CUBE; ++i)
-    {
+    for (int i = 0; i < CUBE; ++i) {
+    
         globalCorners[i] = Rotation * globalCorners[i] + location;
     }
     
@@ -56,6 +56,12 @@ void Cuboid::Rotate(double angle) {
 Vector3D Cuboid::GetLocation() {
     
     return location;
+
+}
+
+double Cuboid::GetRotationAngle() {
+
+    return rotationAngle;
 
 }
 

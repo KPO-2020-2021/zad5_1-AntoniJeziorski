@@ -4,20 +4,29 @@ Drone::Drone() {
 
 }
 
-Drone::Drone(Vector3D scale, Vector3D loc) {
+Drone::Drone(Vector3D bodyScale, Vector3D rotorScale, Vector3D loc) {
     
     location = loc;
-    body.Scale(scale);
+    body.Scale(bodyScale);
     body.ToGlobal(location);
+    for(int i = 0; i < 4; ++i) {
+
+        rotor[i].Scale(rotorScale);
+
+    }
 }
 
-bool Drone::SaveBody( const char *sFileName) {
+bool Drone::SaveBody(int droneNumber) {
+
+    body.ToGlobal(location);
 
     Vector3D X, Y, tmp1 = body(0), tmp2 = body(7), tmp3 = body(2), tmp4 = body(5);
 
     std::ofstream  FileStream;
 
-    FileStream.open(sFileName);
+    std::string name =  body.filename + "body" + std::to_string(droneNumber) + ".dat";
+
+    FileStream.open(name);
     if (!FileStream.is_open())  {
         throw std::runtime_error("Operacja otwarcia pliku do zapisu nie powiodla sie");
         return false;
@@ -36,57 +45,114 @@ bool Drone::SaveBody( const char *sFileName) {
     return !FileStream.fail();
 }
 
+void Drone::RotorToGlobal(int rotorNumber, Vector3D Translation) {
+
+    rotor[rotorNumber].ToCubeSystem(Translation);
+
+    Matrix3D Rotation = RotationMatrix_Z(body.GetRotationAngle());
+
+    for (int i = 0; i < 12; ++i) {
+    
+        rotor[rotorNumber][i] = Rotation * rotor[rotorNumber](i) + location;
+    }
+
+}
+
+bool Drone::SaveRotor(int droneNumber, int rotorNumber, Vector3D Translation) {
+
+    RotorToGlobal(rotorNumber, Translation);
+
+    Vector3D X, Y, tmp1 = rotor[rotorNumber][0], tmp2 = rotor[rotorNumber][7], tmp3 = rotor[rotorNumber][2], tmp4 = rotor[rotorNumber][8];
+
+    std::ofstream  FileStream;
+
+    std::string name = rotor[rotorNumber].filename + "rotor" + std::to_string(rotorNumber) + "_" + std::to_string(droneNumber) + ".dat";
+
+    FileStream.open(name);
+    if (!FileStream.is_open())  {
+        throw std::runtime_error("Operacja otwarcia pliku do zapisu nie powiodla sie");
+        return false;
+    }
+
+    X = (tmp1 + tmp2) / 2;
+    Y = (tmp3 + tmp4) / 2;
+
+    FileStream << X << std::endl << rotor[rotorNumber][0] << std::endl << rotor[rotorNumber][1] << std::endl << Y << std::endl << '#' << std::endl << std::endl;
+    FileStream << X << std::endl << rotor[rotorNumber][2] << std::endl << rotor[rotorNumber][3] << std::endl << Y << std::endl << '#' << std::endl << std::endl;
+    FileStream << X << std::endl << rotor[rotorNumber][4] << std::endl << rotor[rotorNumber][5] << std::endl << Y << std::endl << '#' << std::endl << std::endl;
+    FileStream << X << std::endl << rotor[rotorNumber][6] << std::endl << rotor[rotorNumber][7] << std::endl << Y << std::endl << '#' << std::endl << std::endl;
+    FileStream << X << std::endl << rotor[rotorNumber][8] << std::endl << rotor[rotorNumber][9] << std::endl << Y << std::endl << '#' << std::endl << std::endl;
+    FileStream << X << std::endl << rotor[rotorNumber][10] << std::endl << rotor[rotorNumber][11] << std::endl << Y << std::endl << '#' << std::endl << std::endl;
+    FileStream << X << std::endl << rotor[rotorNumber][0] << std::endl << rotor[rotorNumber][1] << std::endl << Y << std::endl << '#' << std::endl;
+
+    FileStream.close();
+    return !FileStream.fail();
+}
+
+void Drone::SaveDrone(int droneNumber) {
+
+    double v1[3] = {5,4,4}, v2[3] = {-5,4,4}, v3[3] = {-5,-4,4}, v4[3] = {5,-4,4};
+
+    Vector3D vec1(v1), vec2(v2), vec3(v3), vec4(v4);
+
+    SaveBody(droneNumber);
+
+    SaveRotor(droneNumber, 0, vec1);
+
+    SaveRotor(droneNumber, 1, vec2);
+
+    SaveRotor(droneNumber, 2, vec3);
+
+    SaveRotor(droneNumber, 3, vec4);
+    
+}
+
 void Drone::VerticalFlight(Vector3D translation, PzG::LaczeDoGNUPlota& Link, int droneNumber) {
 
-    std::string filename;
-    filename = "../datasets/body" + std::to_string(droneNumber) + ".dat";
-
-    for (int i = 0; i < FLOPS; i++)
-    {
+    for (int i = 0; i < FLOPS; i++) {
+    
         location = location + translation/FLOPS;
-        body.ToGlobal(location);
-        SaveBody(filename.c_str());
+       
+        SaveDrone(droneNumber);
         Link.Rysuj(); // <- Tutaj gnuplot rysuje, to co zapisaliśmy do pliku
         usleep(10000);
+
     }
 
 }
 
 void Drone::HorizontalFlight(double distance, double angle, PzG::LaczeDoGNUPlota& Link, int droneNumber) {
 
-    std::string filename;
-    filename = "../datasets/body" + std::to_string(droneNumber) + ".dat";
-
     Vector3D BodyCenter, tmp, end;
 
     end[0] = distance;
 
-    BodyCenter = body(0) + body(5);
-    BodyCenter = BodyCenter/2;
+    BodyCenter = location;
 
     end = RotationMatrix_Z(rotationAngle) * end + BodyCenter;
 
     tmp = end - BodyCenter;
     tmp[2] = 0;
 
-    for (int i = 0; i < FLOPS; ++i)
-    {
+    for (int i = 0; i < FLOPS; ++i) {
+
         body.Rotate(angle/FLOPS);
-        body.ToGlobal(location);
-        SaveBody(filename.c_str());
+       
+        SaveDrone(droneNumber);
         Link.Rysuj(); // <- Tutaj gnuplot rysuje, to co zapisaliśmy do pliku
         usleep(10000);
+
     }
 
-    for (int i = 0; i < FLOPS; i++)
-    {
+    for (int i = 0; i < FLOPS; ++i) {
+    
         location = location + tmp/FLOPS;
-        body.ToGlobal(location);
-        SaveBody(filename.c_str());
+     
+        SaveDrone(droneNumber);
         Link.Rysuj(); // <- Tutaj gnuplot rysuje, to co zapisaliśmy do pliku
         usleep(10000);
-    }
 
+    }
 } 
 
 void Drone::PlanPath(double angle, double distance) {
@@ -99,8 +165,7 @@ void Drone::PlanPath(double angle, double distance) {
     Vector3D tmp, BodyCenter;
     tmp[0] = distance;
 
-    BodyCenter = body(0) + body(5);
-    BodyCenter = BodyCenter/2;
+    BodyCenter = location;
 
     FileStream << BodyCenter << std::endl;
 
@@ -118,5 +183,4 @@ void Drone::PlanPath(double angle, double distance) {
 
     FileStream.close();
 
-    
 }

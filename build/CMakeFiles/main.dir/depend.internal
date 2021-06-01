@@ -6,6 +6,7 @@ CMakeFiles/main.dir/app/main.cpp.o
  ../inc/drone.hh
  ../inc/example.h
  ../inc/exampleConfig.h.in
+ ../inc/hexagonal_prism.hh
  ../inc/lacze_do_gnuplota.hh
  ../inc/matrix.hh
  ../inc/matrix3D.hh

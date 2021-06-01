@@ -12,6 +12,7 @@ CMakeFiles/program.dir/src/cuboid.cpp.o: ../src/cuboid.cpp
 
 CMakeFiles/program.dir/src/drone.cpp.o: ../inc/cuboid.hh
 CMakeFiles/program.dir/src/drone.cpp.o: ../inc/drone.hh
+CMakeFiles/program.dir/src/drone.cpp.o: ../inc/hexagonal_prism.hh
 CMakeFiles/program.dir/src/drone.cpp.o: ../inc/lacze_do_gnuplota.hh
 CMakeFiles/program.dir/src/drone.cpp.o: ../inc/matrix.hh
 CMakeFiles/program.dir/src/drone.cpp.o: ../inc/matrix3D.hh
@@ -25,6 +26,15 @@ CMakeFiles/program.dir/src/example.cpp.o: ../inc/example.h
 CMakeFiles/program.dir/src/example.cpp.o: ../src/example.cpp
 CMakeFiles/program.dir/src/example.cpp.o: ../tests/doctest/doctest.h
 
+CMakeFiles/program.dir/src/hexagonal_prism.cpp.o: ../inc/hexagonal_prism.hh
+CMakeFiles/program.dir/src/hexagonal_prism.cpp.o: ../inc/matrix.hh
+CMakeFiles/program.dir/src/hexagonal_prism.cpp.o: ../inc/matrix3D.hh
+CMakeFiles/program.dir/src/hexagonal_prism.cpp.o: ../inc/size.hh
+CMakeFiles/program.dir/src/hexagonal_prism.cpp.o: ../inc/solid.hh
+CMakeFiles/program.dir/src/hexagonal_prism.cpp.o: ../inc/vector.hh
+CMakeFiles/program.dir/src/hexagonal_prism.cpp.o: ../inc/vector3D.hh
+CMakeFiles/program.dir/src/hexagonal_prism.cpp.o: ../src/hexagonal_prism.cpp
+
 CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o: ../inc/lacze_do_gnuplota.hh
 CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o: ../src/lacze_do_gnuplota.cpp
 
@@ -36,6 +46,7 @@ CMakeFiles/program.dir/src/matrix3D.cpp.o: ../src/matrix3D.cpp
 
 CMakeFiles/program.dir/src/scene.cpp.o: ../inc/cuboid.hh
 CMakeFiles/program.dir/src/scene.cpp.o: ../inc/drone.hh
+CMakeFiles/program.dir/src/scene.cpp.o: ../inc/hexagonal_prism.hh
 CMakeFiles/program.dir/src/scene.cpp.o: ../inc/lacze_do_gnuplota.hh
 CMakeFiles/program.dir/src/scene.cpp.o: ../inc/matrix.hh
 CMakeFiles/program.dir/src/scene.cpp.o: ../inc/matrix3D.hh

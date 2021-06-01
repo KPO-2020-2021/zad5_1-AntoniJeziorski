@@ -17,10 +17,18 @@ lacze_do_gnuplota.hh
 ../inc/lacze_do_gnuplota.hh
 cuboid.hh
 ../inc/cuboid.hh
+hexagonal_prism.hh
+../inc/hexagonal_prism.hh
 unistd.h
 -
 fstream
 -
+
+../inc/hexagonal_prism.hh
+solid.hh
+../inc/solid.hh
+matrix3D.hh
+../inc/matrix3D.hh
 
 ../inc/lacze_do_gnuplota.hh
 string
@@ -45,10 +53,6 @@ cmath
 ../inc/matrix3D.hh
 matrix.hh
 ../inc/matrix.hh
-
-../inc/scene.hh
-drone.hh
-../inc/drone.hh
 
 ../inc/size.hh
 
@@ -77,8 +81,4 @@ vector.hh
 /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/src/drone.cpp
 drone.hh
 /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/src/drone.hh
-
-/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/src/scene.cpp
-scene.hh
-/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/src/scene.hh
 

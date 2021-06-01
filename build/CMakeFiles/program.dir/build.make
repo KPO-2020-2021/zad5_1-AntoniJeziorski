@@ -148,6 +148,19 @@ CMakeFiles/program.dir/src/scene.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/scene.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/src/scene.cpp -o CMakeFiles/program.dir/src/scene.cpp.s
 
+CMakeFiles/program.dir/src/hexagonal_prism.cpp.o: CMakeFiles/program.dir/flags.make
+CMakeFiles/program.dir/src/hexagonal_prism.cpp.o: ../src/hexagonal_prism.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/program.dir/src/hexagonal_prism.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/program.dir/src/hexagonal_prism.cpp.o -c /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/src/hexagonal_prism.cpp
+
+CMakeFiles/program.dir/src/hexagonal_prism.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/program.dir/src/hexagonal_prism.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/src/hexagonal_prism.cpp > CMakeFiles/program.dir/src/hexagonal_prism.cpp.i
+
+CMakeFiles/program.dir/src/hexagonal_prism.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/hexagonal_prism.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/src/hexagonal_prism.cpp -o CMakeFiles/program.dir/src/hexagonal_prism.cpp.s
+
 program: CMakeFiles/program.dir/src/example.cpp.o
 program: CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o
 program: CMakeFiles/program.dir/src/cuboid.cpp.o
@@ -155,6 +168,7 @@ program: CMakeFiles/program.dir/src/drone.cpp.o
 program: CMakeFiles/program.dir/src/matrix3D.cpp.o
 program: CMakeFiles/program.dir/src/solid.cpp.o
 program: CMakeFiles/program.dir/src/scene.cpp.o
+program: CMakeFiles/program.dir/src/hexagonal_prism.cpp.o
 program: CMakeFiles/program.dir/build.make
 
 .PHONY : program
