@@ -6,37 +6,11 @@
 
 #IncludeRegexTransform: 
 
-../inc/cuboid.hh
-matrix3D.hh
-../inc/matrix3D.hh
-solid.hh
-../inc/solid.hh
-
-../inc/drone.hh
-lacze_do_gnuplota.hh
-../inc/lacze_do_gnuplota.hh
-cuboid.hh
-../inc/cuboid.hh
-hexagonal_prism.hh
-../inc/hexagonal_prism.hh
-unistd.h
--
-fstream
--
-
 ../inc/hexagonal_prism.hh
 solid.hh
 ../inc/solid.hh
 matrix3D.hh
 ../inc/matrix3D.hh
-
-../inc/lacze_do_gnuplota.hh
-string
--
-list
--
-vector
--
 
 ../inc/matrix.hh
 size.hh
@@ -78,7 +52,7 @@ iomanip
 vector.hh
 ../inc/vector.hh
 
-/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/src/drone.cpp
-drone.hh
-/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/src/drone.hh
+/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/src/hexagonal_prism.cpp
+hexagonal_prism.hh
+/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/src/hexagonal_prism.hh
 

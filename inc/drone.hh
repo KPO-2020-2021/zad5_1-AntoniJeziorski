@@ -36,4 +36,6 @@ class Drone {
 
         void RotorToGlobal(int rotorNumber, Vector3D Translation);
 
+        void Recce(int droneNumber, PzG::LaczeDoGNUPlota& Link);
+
 };

@@ -112,8 +112,20 @@ void Drone::VerticalFlight(Vector3D translation, PzG::LaczeDoGNUPlota& Link, int
     for (int i = 0; i < FLOPS; i++) {
     
         location = location + translation/FLOPS;
-       
+        if(translation[2] > 0) {
+            rotor[0].Rotate(-5);
+            rotor[1].Rotate(5);
+            rotor[2].Rotate(-5);
+            rotor[3].Rotate(5); 
+        }
+        else {
+            rotor[0].Rotate(-1);
+            rotor[1].Rotate(1);
+            rotor[2].Rotate(-1);
+            rotor[3].Rotate(1);
+        }
         SaveDrone(droneNumber);
+        
         Link.Rysuj(); // <- Tutaj gnuplot rysuje, to co zapisaliśmy do pliku
         usleep(10000);
 
@@ -135,9 +147,20 @@ void Drone::HorizontalFlight(double distance, double angle, PzG::LaczeDoGNUPlota
     tmp[2] = 0;
 
     for (int i = 0; i < FLOPS; ++i) {
-
+        
+        if(angle > 0) {
+            rotor[0].Rotate(-4);
+            rotor[1].Rotate(2.5);
+            rotor[2].Rotate(-4);
+            rotor[3].Rotate(2.5); 
+        }
+        else {
+            rotor[0].Rotate(-2.5);
+            rotor[1].Rotate(4);
+            rotor[2].Rotate(-2.5);
+            rotor[3].Rotate(4);
+        }
         body.Rotate(angle/FLOPS);
-       
         SaveDrone(droneNumber);
         Link.Rysuj(); // <- Tutaj gnuplot rysuje, to co zapisaliśmy do pliku
         usleep(10000);
@@ -145,9 +168,12 @@ void Drone::HorizontalFlight(double distance, double angle, PzG::LaczeDoGNUPlota
     }
 
     for (int i = 0; i < FLOPS; ++i) {
-    
+
         location = location + tmp/FLOPS;
-     
+        rotor[0].Rotate(-4);
+        rotor[1].Rotate(4);
+        rotor[2].Rotate(-2.5);
+        rotor[3].Rotate(2.5); 
         SaveDrone(droneNumber);
         Link.Rysuj(); // <- Tutaj gnuplot rysuje, to co zapisaliśmy do pliku
         usleep(10000);
@@ -184,3 +210,72 @@ void Drone::PlanPath(double angle, double distance) {
     FileStream.close();
 
 }
+
+void Drone::Recce(int droneNumber, PzG::LaczeDoGNUPlota& Link) {
+
+    double k = sqrt((sqrt(2) + 2 )/ 2), u[3] = {0,0,80}, d[3] = {0,0,-80};
+    double distance = 20 / k;
+
+    std::ofstream FileStream;    
+    FileStream.open("../datasets/path.dat");
+
+    Vector3D tmp, BodyCenter, tmp2, up(u), down(d);
+    tmp[0] = distance;
+
+
+    BodyCenter = location;
+
+    FileStream << BodyCenter << std::endl;
+
+    BodyCenter[2] += 80;
+
+    FileStream << BodyCenter << std::endl;
+
+    BodyCenter[0] += 20;
+
+    FileStream << BodyCenter << std::endl;
+
+    BodyCenter = RotationMatrix_Z(112.5) * BodyCenter + tmp;
+
+    FileStream << BodyCenter << std::endl;
+
+    BodyCenter = RotationMatrix_Z(45) * BodyCenter + tmp;
+
+    FileStream << BodyCenter << std::endl;
+
+    BodyCenter = RotationMatrix_Z(45) * BodyCenter + tmp;
+
+    FileStream << BodyCenter << std::endl;
+/*
+    BodyCenter = RotationMatrix_Z(45) * BodyCenter + tmp;
+
+    FileStream << BodyCenter << std::endl;
+
+    BodyCenter = RotationMatrix_Z(45) * BodyCenter + tmp;
+
+    FileStream << BodyCenter << std::endl;
+
+    BodyCenter = RotationMatrix_Z(45) * BodyCenter + tmp;
+
+    FileStream << BodyCenter << std::endl;
+
+    BodyCenter = RotationMatrix_Z(45) * BodyCenter + tmp;
+
+    FileStream << BodyCenter << std::endl; */
+
+    FileStream.close();
+
+    VerticalFlight(up, Link, droneNumber);
+    HorizontalFlight(20, 0, Link, droneNumber);
+    rotationAngle = rotationAngle + 112.5;
+    HorizontalFlight(distance, 112.5, Link, droneNumber);
+    for(int i = 0; i < 7; ++i) {
+        rotationAngle = rotationAngle + 45;
+        HorizontalFlight(distance, 45, Link, droneNumber);
+    }
+    rotationAngle = rotationAngle + 112.5;
+    HorizontalFlight(20, 112.5, Link, droneNumber);
+    VerticalFlight(down, Link, droneNumber);
+}
+
+

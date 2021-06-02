@@ -113,9 +113,11 @@ int main() {
         
             std::cout << "a - wybierz aktywnego drona" << std::endl;
             std::cout << "p - zadaj parametry przelotu" << std::endl;
+            std::cout << "z - wykonaj zwiad" << std::endl;
             std::cout << "m - wyswietl menu" << std::endl;
             std::cout << std::endl;
             std::cout << "k - koniec dzialania programu" << std::endl;
+            
         }
 
         std::cout << "Twoj wybor: " << std::endl;
@@ -162,6 +164,14 @@ int main() {
                 std::cin >> droneNumber;
 
                 break;
+
+            case 'z':
+                Link.DodajNazwePliku("../datasets/path.dat");
+                scene.UseDrone(droneNumber-1).Recce(droneNumber, Link);
+                Link.UsunNazwePliku("../datasets/path.dat");
+                Link.Rysuj();
+                break;
+
             default:
                 option = '0';
                 std::cerr << "!!! NIEPOPRAWNA OPCJA !!!" << std::endl; break;

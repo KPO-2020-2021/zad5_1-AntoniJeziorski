@@ -62,6 +62,8 @@ void HexPrism::ToCubeSystem(Vector3D Translation) {
 
 void HexPrism::Rotate(double angle) {
 
+    if(rotationAngle > 360)
+        rotationAngle =- 360;
     rotationAngle += angle;
 
 }
