@@ -211,57 +211,33 @@ void Drone::PlanPath(double angle, double distance) {
 
 }
 
-void Drone::Recce(int droneNumber, PzG::LaczeDoGNUPlota& Link) {
+void Drone::Recce(int droneNumber, PzG::LaczeDoGNUPlota& Link  ) {
 
-    double k = sqrt((sqrt(2) + 2 )/ 2), u[3] = {0,0,80}, d[3] = {0,0,-80};
-    double distance = 20 / k;
+    double k = sqrt((sqrt(2) + 2 )/ 2), u[3] = {0,0,80}, d[3] = {0,0,-80}, distance = 20 / k, tab[3] = {distance,0,0}, angle = 112.5;
 
     std::ofstream FileStream;    
     FileStream.open("../datasets/path.dat");
 
-    Vector3D tmp, BodyCenter, tmp2, up(u), down(d);
-    tmp[0] = distance;
-
+    Vector3D tmp, BodyCenter, tmp2(tab), up(u), down(d), tmp3;
+    tmp[0] = 20;
 
     BodyCenter = location;
-
     FileStream << BodyCenter << std::endl;
-
     BodyCenter[2] += 80;
-
     FileStream << BodyCenter << std::endl;
-
-    BodyCenter[0] += 20;
-
+    BodyCenter = RotationMatrix_Z(rotationAngle) * tmp + BodyCenter;
     FileStream << BodyCenter << std::endl;
+    tmp3 = RotationMatrix_Z(angle + rotationAngle) * tmp2 + BodyCenter;
+    FileStream << tmp3 << std::endl; 
+    angle += 45;
+    
+    for(int i = 0; i < 7; ++i) {
 
-    BodyCenter = RotationMatrix_Z(112.5) * BodyCenter + tmp;
+        tmp3 = RotationMatrix_Z(angle + rotationAngle) * tmp2 + tmp3;
+        FileStream << tmp3 << std::endl; 
+        angle += 45;
 
-    FileStream << BodyCenter << std::endl;
-
-    BodyCenter = RotationMatrix_Z(45) * BodyCenter + tmp;
-
-    FileStream << BodyCenter << std::endl;
-
-    BodyCenter = RotationMatrix_Z(45) * BodyCenter + tmp;
-
-    FileStream << BodyCenter << std::endl;
-/*
-    BodyCenter = RotationMatrix_Z(45) * BodyCenter + tmp;
-
-    FileStream << BodyCenter << std::endl;
-
-    BodyCenter = RotationMatrix_Z(45) * BodyCenter + tmp;
-
-    FileStream << BodyCenter << std::endl;
-
-    BodyCenter = RotationMatrix_Z(45) * BodyCenter + tmp;
-
-    FileStream << BodyCenter << std::endl;
-
-    BodyCenter = RotationMatrix_Z(45) * BodyCenter + tmp;
-
-    FileStream << BodyCenter << std::endl; */
+    }
 
     FileStream.close();
 
@@ -276,6 +252,7 @@ void Drone::Recce(int droneNumber, PzG::LaczeDoGNUPlota& Link) {
     rotationAngle = rotationAngle + 112.5;
     HorizontalFlight(20, 112.5, Link, droneNumber);
     VerticalFlight(down, Link, droneNumber);
+    
 }
 
 

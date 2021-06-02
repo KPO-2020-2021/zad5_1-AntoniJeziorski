@@ -168,7 +168,7 @@ int main() {
             case 'z':
                 Link.DodajNazwePliku("../datasets/path.dat");
                 scene.UseDrone(droneNumber-1).Recce(droneNumber, Link);
-                Link.UsunNazwePliku("../datasets/path.dat");
+                Link.UsunNazwePliku("../datasets/path.dat"); 
                 Link.Rysuj();
                 break;
 
