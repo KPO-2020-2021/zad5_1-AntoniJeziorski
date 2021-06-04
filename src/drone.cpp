@@ -1,5 +1,11 @@
 #include "drone.hh"
 
+/*!
+ *
+ * \file drone.cpp
+ * \brief Plik zawierajace definicje metod klasy Drone
+ */
+
 Drone::Drone() {
 
 }
@@ -211,7 +217,7 @@ void Drone::PlanPath(double angle, double distance) {
 
 }
 
-void Drone::Recce(int droneNumber, PzG::LaczeDoGNUPlota& Link  ) {
+void Drone::Recce(int droneNumber, PzG::LaczeDoGNUPlota& Link) {
 
     double k = sqrt((sqrt(2) + 2 )/ 2), u[3] = {0,0,80}, d[3] = {0,0,-80}, distance = 20 / k, tab[3] = {distance,0,0}, angle = 112.5;
 
@@ -246,13 +252,15 @@ void Drone::Recce(int droneNumber, PzG::LaczeDoGNUPlota& Link  ) {
     rotationAngle = rotationAngle + 112.5;
     HorizontalFlight(distance, 112.5, Link, droneNumber);
     for(int i = 0; i < 7; ++i) {
+
         rotationAngle = rotationAngle + 45;
         HorizontalFlight(distance, 45, Link, droneNumber);
+        
     }
     rotationAngle = rotationAngle + 112.5;
     HorizontalFlight(20, 112.5, Link, droneNumber);
     VerticalFlight(down, Link, droneNumber);
-    
+
 }
 
 

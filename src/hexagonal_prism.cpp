@@ -1,5 +1,11 @@
 #include "hexagonal_prism.hh"
 
+/*!
+ *
+ * \file hexagonal_prism.cpp
+ * \brief Plik zawierajacy definicje metod klasy HexPrism
+ */
+
 HexPrism::HexPrism() {
 
     double a[3] = {0.5, 0, -0.5},b[3] = {0.5, 0, 0.5},c[3] = {0.25, 0.433, -0.5},d[3] = {0.25, 0.433, 0.5},e[3] = {-0.25, 0.433, -0.5},f[3] = {-0.25, 0.433, 0.5},g[3] = {-0.5, 0, -0.5},h[3] = {-0.5, 0, 0.5},i[3] = {-0.25, -0.433, -0.5},j[3] = {-0.25, -0.433, 0.5},k[3] = {0.25, -0.433, -0.5},l[3] = {0.25, -0.433, 0.5};

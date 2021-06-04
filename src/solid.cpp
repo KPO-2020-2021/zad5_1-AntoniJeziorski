@@ -1,5 +1,11 @@
 #include "solid.hh"
 
+/*!
+ *
+ * \file solid.cpp
+ * \brief Plik zawierajacy definicje metod klasy Solid
+ */
+
 Solid::Solid() {
 
     filename = "../datasets/";

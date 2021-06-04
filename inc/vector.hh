@@ -27,6 +27,10 @@ class Vector {
 
     double size[Size];
 
+    static int actualVectorAmount;
+
+    static int allVectorAmount;
+
     public:
 
         /*!
@@ -47,6 +51,8 @@ class Vector {
          */
 
         Vector<Size>(double [Size]); 
+
+        ~Vector<Size>();
        
         /*!
          * 
@@ -137,7 +143,42 @@ class Vector {
          */
 
         bool operator == (const Vector& tmp);
+
+        /*!
+         *
+         * \brief Metoda do pobierania wartosci aktualnej liczby wektorow
+         * 
+         * \return Aktualna liczba wektorow
+         */
+
+        static int getActualVectorAmount();
+
+        /*!
+         *
+         * \brief Metoda do pobierania wartosci calkowitej liczby wektorow
+         * 
+         * \return Calkowita liczba wektorow
+         */
+
+        static int getAllVectorAmount();
 };
+
+template <unsigned int Size>
+int Vector<Size>::allVectorAmount;
+
+template <unsigned int Size>
+int Vector<Size>::actualVectorAmount;
+
+
+template <unsigned int Size>
+int Vector<Size>::getActualVectorAmount() {
+    return actualVectorAmount;
+}
+
+template <unsigned int Size>
+int Vector<Size>::getAllVectorAmount() {
+    return allVectorAmount;
+}
 
 /*!
  *
@@ -176,6 +217,9 @@ Vector<Size>::Vector() {
     for (unsigned int i = 0; i < Size; ++i) {
         size[i] = 0;
     }
+
+    ++allVectorAmount;
+    ++actualVectorAmount; 
 }
 
 template <unsigned int Size>
@@ -188,6 +232,14 @@ Vector<Size>::Vector(double tmp[Size]) {
             size[i] = tmp[i];
         }
     }
+
+    ++allVectorAmount;
+    ++actualVectorAmount;
+}
+
+template <unsigned int Size>
+Vector<Size>::~Vector() {
+    --actualVectorAmount;
 }
 
 template <unsigned int Size>

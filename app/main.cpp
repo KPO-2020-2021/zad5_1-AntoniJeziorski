@@ -104,10 +104,13 @@ int main() {
 
     scene.GetDrone(0).SaveDrone(1);
     scene.GetDrone(1).SaveDrone(2);
-  
+
     Link.Rysuj(); // <- Tutaj gnuplot rysuje, to co zapisaliśmy do pliku
 
     while(option != 'k') { // Dopoki nie zostanie podane k
+
+        std::cout << "Aktualna ilosc obiektow typu wektor3D: " << Vector3D::getActualVectorAmount() << std::endl;
+        std::cout << "Laczna ilosc obiektow typu wektor3D: " << Vector3D::getAllVectorAmount() << std::endl;
 
         if(option == '0') { 
         
@@ -176,6 +179,7 @@ int main() {
                 option = '0';
                 std::cerr << "!!! NIEPOPRAWNA OPCJA !!!" << std::endl; break;
         }
+
     }
 
     return 0;

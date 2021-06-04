@@ -1,5 +1,11 @@
 #include "scene.hh"
 
+/*!
+ *
+ * \file scene.cpp
+ * \brief Plik zawierajacy definicje metod klasy Scene
+ */
+
 Scene::Scene(Drone drone1, Drone drone2) {
 
     arrayOfDrones[0] = drone1;
