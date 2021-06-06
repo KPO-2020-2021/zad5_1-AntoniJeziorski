@@ -1,0 +1,10 @@
+<map id="Drone::SaveDrone" name="Drone::SaveDrone">
+<area shape="rect" id="node1" title="Metoda zapisujaca drona do plikow &#160;Wywoluje funkcje SaveBody i SaveDrone." alt="" coords="5,49,145,76"/>
+<area shape="rect" id="node2" href="$class_drone.html#a5b9788c3ecdd59290c03c104c8653315" title="Metoda zapisujaca korpus drona do pliku." alt="" coords="194,12,329,39"/>
+<area shape="rect" id="node5" href="$class_drone.html#ae6e7866d93cddb51bf457fea9c726262" title="Metoda zapisuja rotor do pliku." alt="" coords="193,75,329,101"/>
+<area shape="rect" id="node3" href="$class_cuboid.html#a6c363f6bd27a8da3ec0c46c83eb180ee" title="Metoda obliczajaca wspolrzedne globalne wierzcholkow prostopadloscianu." alt="" coords="392,5,523,32"/>
+<area shape="rect" id="node4" href="$matrix3_d_8hh.html#abb063b994dec3955ed7e058d36058d01" title="Funkcja wypełniająca macierz odpowiendimi wartościami, które tworzą macierz rotacji w osi OZ." alt="" coords="824,52,959,79"/>
+<area shape="rect" id="node6" href="$class_drone.html#a56a3aa846eaf0a7f8ded390ae00e7f25" title="Metoda obliczajaca wspolrzedne globalne rotora." alt="" coords="377,100,537,127"/>
+<area shape="rect" id="node7" href="$class_cuboid.html#a4240058165986243295525580442e128" title="Metoda zwracajaca calkowity kat obrotu prostopadloscianu." alt="" coords="585,103,776,129"/>
+<area shape="rect" id="node8" href="$class_hex_prism.html#afca474c9f7c50dc1e245e864e38d5156" title="Metoda obliczajaca wspolrzedne prostopadloscianu szesciokatnego w ukladzie wpsolrzednym rodzica." alt="" coords="586,153,775,180"/>
+</map>

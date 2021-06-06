@@ -1,0 +1,20 @@
+<map id="Drone::HorizontalFlight" name="Drone::HorizontalFlight">
+<area shape="rect" id="node1" title="Metoda realizujaca lot poziomy drona." alt="" coords="5,107,179,133"/>
+<area shape="rect" id="node2" href="$class_hex_prism.html#aa0f0fd9288a171d404c059168b385a98" title="Metoda aktualizujaca wartosc calkowitego kata obrotu." alt="" coords="245,5,381,32"/>
+<area shape="rect" id="node3" href="$class_cuboid.html#a2a6f2b82c6f76deccf9b84cb73606f9f" title="Metoda aktualizujaca kat obrotu prostopadloscianu." alt="" coords="254,56,373,83"/>
+<area shape="rect" id="node4" href="$matrix3_d_8hh.html#abb063b994dec3955ed7e058d36058d01" title="Funkcja wypełniająca macierz odpowiendimi wartościami, które tworzą macierz rotacji w osi OZ." alt="" coords="1211,380,1345,407"/>
+<area shape="rect" id="node5" href="$class_pz_g_1_1_lacze_do_g_n_u_plota.html#a065f5b8402737cc62b0ad4f66d028335" title="Generuje polecenie rysowania i przesyła je do gnuplota." alt="" coords="227,161,400,202"/>
+<area shape="rect" id="node12" href="$class_drone.html#ac802f8ea993d0a79a8407e4b9496c675" title="Metoda zapisujaca drona do plikow &#160;Wywoluje funkcje SaveBody i SaveDrone." alt="" coords="243,355,383,381"/>
+<area shape="rect" id="node6" href="$namespace_pz_g.html#aa010184f31b26bb561b42f22438b821e" title="Funkcja pomocnicza, dopisuje do polecenia wpisy związane z rysowaniem z pliku." alt="" coords="455,168,676,195"/>
+<area shape="rect" id="node7" href="$namespace_pz_g.html#a7227cb39c785b1c746b6bb5515c0b781" title="Dodaje do listy rysowanych punktów, punkty o różnych rozmiarach." alt="" coords="448,221,683,262"/>
+<area shape="rect" id="node8" href="$namespace_pz_g.html#a169c311f0e0b6ffadcd44e91e749f72d" title="Wczytuje z pliku listę punktów." alt="" coords="731,222,924,263"/>
+<area shape="rect" id="node9" href="$class_pz_g_1_1_atrybuty_rysowania.html#ab068535b4d2f755c394557d1da72a4eb" title="Zmienia kolor rysowania." alt="" coords="976,158,1159,199"/>
+<area shape="rect" id="node10" href="$class_pz_g_1_1_atrybuty_rysowania.html#af4b140eb03bc10b6fd816fad63f8372e" title="Zmienia rozmiar rysowania." alt="" coords="976,223,1159,265"/>
+<area shape="rect" id="node11" href="$class_pz_g_1_1_atrybuty_rysowania.html#a2ac97706124b14072715ecf3f07e82b4" title="Zmienia styl rysowania." alt="" coords="976,289,1159,330"/>
+<area shape="rect" id="node13" href="$class_drone.html#a5b9788c3ecdd59290c03c104c8653315" title="Metoda zapisujaca korpus drona do pliku." alt="" coords="498,355,633,381"/>
+<area shape="rect" id="node15" href="$class_drone.html#ae6e7866d93cddb51bf457fea9c726262" title="Metoda zapisuja rotor do pliku." alt="" coords="497,431,633,457"/>
+<area shape="rect" id="node14" href="$class_cuboid.html#a6c363f6bd27a8da3ec0c46c83eb180ee" title="Metoda obliczajaca wspolrzedne globalne wierzcholkow prostopadloscianu." alt="" coords="762,355,893,381"/>
+<area shape="rect" id="node16" href="$class_drone.html#a56a3aa846eaf0a7f8ded390ae00e7f25" title="Metoda obliczajaca wspolrzedne globalne rotora." alt="" coords="747,444,907,471"/>
+<area shape="rect" id="node17" href="$class_cuboid.html#a4240058165986243295525580442e128" title="Metoda zwracajaca calkowity kat obrotu prostopadloscianu." alt="" coords="972,456,1163,483"/>
+<area shape="rect" id="node18" href="$class_hex_prism.html#afca474c9f7c50dc1e245e864e38d5156" title="Metoda obliczajaca wspolrzedne prostopadloscianu szesciokatnego w ukladzie wpsolrzednym rodzica." alt="" coords="973,507,1162,533"/>
+</map>

@@ -1,0 +1,19 @@
+<map id="inc/size.hh" name="inc/size.hh">
+<area shape="rect" id="node1" title=" " alt="" coords="504,5,595,32"/>
+<area shape="rect" id="node2" href="$matrix_8hh.html" title="Plik zawierający definicję szablonu macierzy." alt="" coords="403,155,511,181"/>
+<area shape="rect" id="node14" href="$vector_8hh.html" title="Plik zawierający definicję szablonu wektora." alt="" coords="587,80,693,107"/>
+<area shape="rect" id="node16" href="$solid_8hh.html" title="Plik zawierający definicję klasy Solid." alt="" coords="569,229,665,256"/>
+<area shape="rect" id="node3" href="$matrix3_d_8hh.html" title="Plik zawierający definicję klasy Matrix3D." alt="" coords="357,229,483,256"/>
+<area shape="rect" id="node4" href="$main_8cpp.html" title=" " alt="" coords="439,528,550,555"/>
+<area shape="rect" id="node5" href="$cuboid_8hh.html" title="Plik zawierajacy definicje klasy Cuboid." alt="" coords="533,304,641,331"/>
+<area shape="rect" id="node11" href="$hexagonal__prism_8hh.html" title="Plik zawierajacy definicje klasy HexPrism." alt="" coords="331,304,509,331"/>
+<area shape="rect" id="node13" href="$matrix3_d_8cpp.html" title=" " alt="" coords="5,304,139,331"/>
+<area shape="rect" id="node6" href="$drone_8hh.html" title="Plik zawierajacy definicje klasy Drone." alt="" coords="422,379,525,405"/>
+<area shape="rect" id="node10" href="$cuboid_8cpp.html" title=" " alt="" coords="600,379,715,405"/>
+<area shape="rect" id="node7" href="$scene_8hh.html" title="Plik zawierajacy definicje klasy Scene." alt="" coords="239,453,342,480"/>
+<area shape="rect" id="node9" href="$drone_8cpp.html" title="Plik zawierajace definicje metod klasy Drone." alt="" coords="417,453,527,480"/>
+<area shape="rect" id="node8" href="$scene_8cpp.html" title="Plik zawierajacy definicje metod klasy Scene." alt="" coords="235,528,346,555"/>
+<area shape="rect" id="node12" href="$hexagonal__prism_8cpp.html" title="Plik zawierajacy definicje metod klasy HexPrism." alt="" coords="213,379,397,405"/>
+<area shape="rect" id="node15" href="$vector3_d_8hh.html" title="Plik zawierający definicję klasy Vector3D." alt="" coords="587,155,711,181"/>
+<area shape="rect" id="node17" href="$solid_8cpp.html" title="Plik zawierajacy definicje metod klasy Solid." alt="" coords="765,304,867,331"/>
+</map>

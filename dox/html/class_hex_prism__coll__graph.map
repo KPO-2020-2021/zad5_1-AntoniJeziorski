@@ -1,0 +1,5 @@
+<map id="HexPrism" name="HexPrism">
+<area shape="rect" id="node1" title="Definicja klasy HexPrism dziedziczacej po klasie Solid modelujaca prostopadloscian szesciokatny w tro..." alt="" coords="49,203,135,229"/>
+<area shape="rect" id="node2" href="$class_solid.html" title="Definicja klasy Solid." alt="" coords="206,111,261,137"/>
+<area shape="rect" id="node3" href="$class_vector.html" title=" " alt="" coords="5,5,107,32"/>
+</map>

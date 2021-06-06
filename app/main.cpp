@@ -112,6 +112,8 @@ int main() {
         std::cout << "Aktualna ilosc obiektow typu wektor3D: " << Vector3D::getActualVectorAmount() << std::endl;
         std::cout << "Laczna ilosc obiektow typu wektor3D: " << Vector3D::getAllVectorAmount() << std::endl;
 
+        std::cout << "Nr aktywnego drona: " << droneNumber << " (" << scene.GetDrone(droneNumber-1).GetLocation()[0] << ", " << scene.GetDrone(droneNumber-1).GetLocation()[1] <<")" << std::endl;  
+
         if(option == '0') { 
         
             std::cout << "a - wybierz aktywnego drona" << std::endl;
@@ -163,6 +165,8 @@ int main() {
                 break;
             case 'a':
 
+                std::cout << "1: " << droneNumber << " (" << scene.GetDrone(0).GetLocation()[0] << ", " << scene.GetDrone(0).GetLocation()[1] <<")" << std::endl;
+                std::cout << "2: " << droneNumber << " (" << scene.GetDrone(1).GetLocation()[0] << ", " << scene.GetDrone(1).GetLocation()[1] <<")" << std::endl;
                 std::cout << "Podaj numer drona" << std::endl;
                 std::cin >> droneNumber;
 

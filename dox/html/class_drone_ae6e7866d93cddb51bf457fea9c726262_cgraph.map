@@ -1,0 +1,7 @@
+<map id="Drone::SaveRotor" name="Drone::SaveRotor">
+<area shape="rect" id="node1" title="Metoda zapisuja rotor do pliku." alt="" coords="5,56,141,83"/>
+<area shape="rect" id="node2" href="$class_drone.html#a56a3aa846eaf0a7f8ded390ae00e7f25" title="Metoda obliczajaca wspolrzedne globalne rotora." alt="" coords="189,56,349,83"/>
+<area shape="rect" id="node3" href="$class_cuboid.html#a4240058165986243295525580442e128" title="Metoda zwracajaca calkowity kat obrotu prostopadloscianu." alt="" coords="397,5,588,32"/>
+<area shape="rect" id="node4" href="$matrix3_d_8hh.html#abb063b994dec3955ed7e058d36058d01" title="Funkcja wypełniająca macierz odpowiendimi wartościami, które tworzą macierz rotacji w osi OZ." alt="" coords="636,81,771,108"/>
+<area shape="rect" id="node5" href="$class_hex_prism.html#afca474c9f7c50dc1e245e864e38d5156" title="Metoda obliczajaca wspolrzedne prostopadloscianu szesciokatnego w ukladzie wpsolrzednym rodzica." alt="" coords="398,107,587,133"/>
+</map>

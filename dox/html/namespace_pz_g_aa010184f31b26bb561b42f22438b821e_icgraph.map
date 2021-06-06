@@ -1,0 +1,9 @@
+<map id="PzG::DopiszRysowanieZPlikow" name="PzG::DopiszRysowanieZPlikow">
+<area shape="rect" id="node1" title="Funkcja pomocnicza, dopisuje do polecenia wpisy związane z rysowaniem z pliku." alt="" coords="729,46,951,73"/>
+<area shape="rect" id="node2" href="$class_pz_g_1_1_lacze_do_g_n_u_plota.html#ad3d7607946b82aa941d786dcd086d27e" title="Tworzy listę parametrów umożliwiających rysowanie brył z plików." alt="" coords="485,5,681,47"/>
+<area shape="rect" id="node3" href="$class_pz_g_1_1_lacze_do_g_n_u_plota.html#a065f5b8402737cc62b0ad4f66d028335" title="Generuje polecenie rysowania i przesyła je do gnuplota." alt="" coords="497,71,670,112"/>
+<area shape="rect" id="node4" href="$class_drone.html#a17966e2db825caf84830b227e8a205e0" title="Metoda realizujaca lot poziomy drona." alt="" coords="264,27,437,54"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,53,60,79"/>
+<area shape="rect" id="node7" href="$class_drone.html#ab02fd50346da5007b0c0d7de073843a4" title="Metoda realizujaca lot pionowy drona." alt="" coords="273,78,428,105"/>
+<area shape="rect" id="node6" href="$class_drone.html#a58b3f97c7e76a862bac36e7dde14d0ef" title="Metoda realizujaca zwiad drona." alt="" coords="108,27,216,54"/>
+</map>

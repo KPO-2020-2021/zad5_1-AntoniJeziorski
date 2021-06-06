@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Dron 5.1: Plik źródłowy src/hexagonal_prism.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Dron 5.1
+   &#160;<span id="projectnumber">1.1</span>
+   </div>
+   <div id="projectbrief">Antoni Jeziorski 259254</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('hexagonal__prism_8cpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">hexagonal_prism.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="hexagonal__prism_8cpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="hexagonal__prism_8hh.html">hexagonal_prism.hh</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_hex_prism.html#a08e470dbf02c086c1a5151758c092018">    9</a></span>&#160;<a class="code" href="class_hex_prism.html#a08e470dbf02c086c1a5151758c092018">HexPrism::HexPrism</a>() {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">double</span> a[3] = {0.5, 0, -0.5},b[3] = {0.5, 0, 0.5},c[3] = {0.25, 0.433, -0.5},d[3] = {0.25, 0.433, 0.5},e[3] = {-0.25, 0.433, -0.5},f[3] = {-0.25, 0.433, 0.5},g[3] = {-0.5, 0, -0.5},h[3] = {-0.5, 0, 0.5},i[3] = {-0.25, -0.433, -0.5},j[3] = {-0.25, -0.433, 0.5},k[3] = {0.25, -0.433, -0.5},l[3] = {0.25, -0.433, 0.5};</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="class_vector.html">Vector3D</a> c1(a),c2(b),c3(c),c4(d),c5(e),c6(f),c7(g),c8(h),c9(i),c10(j),c11(k),c12(l);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="class_hex_prism.html#acb7bbba783aa9e89be7d1486237e6039">localCorners</a>[0] = c1;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="class_hex_prism.html#acb7bbba783aa9e89be7d1486237e6039">localCorners</a>[1] = c2;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="class_hex_prism.html#acb7bbba783aa9e89be7d1486237e6039">localCorners</a>[2] = c3;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_hex_prism.html#acb7bbba783aa9e89be7d1486237e6039">localCorners</a>[3] = c4;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="class_hex_prism.html#acb7bbba783aa9e89be7d1486237e6039">localCorners</a>[4] = c5;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="class_hex_prism.html#acb7bbba783aa9e89be7d1486237e6039">localCorners</a>[5] = c6;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="class_hex_prism.html#acb7bbba783aa9e89be7d1486237e6039">localCorners</a>[6] = c7;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_hex_prism.html#acb7bbba783aa9e89be7d1486237e6039">localCorners</a>[7] = c8;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="class_hex_prism.html#acb7bbba783aa9e89be7d1486237e6039">localCorners</a>[8] = c9;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="class_hex_prism.html#acb7bbba783aa9e89be7d1486237e6039">localCorners</a>[9] = c10;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="class_hex_prism.html#acb7bbba783aa9e89be7d1486237e6039">localCorners</a>[10] = c11;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_hex_prism.html#acb7bbba783aa9e89be7d1486237e6039">localCorners</a>[11] = c12;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_hex_prism.html#a945593aab8e5d2d316caeaed8d495aff">rotationAngle</a> = 0;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_hex_prism.html#abc9a5e5daeb94f744a5a19189d7cc0ad">   32</a></span>&#160;<a class="code" href="class_vector.html">Vector3D</a> &amp;<a class="code" href="class_hex_prism.html#abc9a5e5daeb94f744a5a19189d7cc0ad">HexPrism::operator () </a>(<span class="keywordtype">int</span> index) {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">if</span> (index &lt; 0 || index &gt;= 12) {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Error:  Blad ilosci wierzcholkow!&quot;</span>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_hex_prism.html#a708de8b82077ccf6cfa7b9e52baa885c">cuboidSystemCorners</a>[index];</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_hex_prism.html#a7c580cc9f46d09f2e841be9f3aaf6c77">   40</a></span>&#160;<a class="code" href="class_vector.html">Vector3D</a> &amp;<a class="code" href="class_hex_prism.html#a7c580cc9f46d09f2e841be9f3aaf6c77">HexPrism::operator [] </a>(<span class="keywordtype">int</span> index) {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">if</span> (index &lt; 0 || index &gt;= 12) {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Error:  Blad ilosci wierzcholkow!&quot;</span>);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_hex_prism.html#a8e3abae889a3d22936ccca0c2324c24c">globalCorners</a>[index];</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_hex_prism.html#afca474c9f7c50dc1e245e864e38d5156">   48</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_hex_prism.html#afca474c9f7c50dc1e245e864e38d5156">HexPrism::ToCubeSystem</a>(<a class="code" href="class_vector.html">Vector3D</a>&amp; Translation) {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="class_hex_prism.html#a590fa6cfe81c8814f6ff7cd3bc1a9a6c">location</a> = Translation;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="class_matrix.html">Matrix3D</a> Rotation = <a class="code" href="matrix3_d_8hh.html#abb063b994dec3955ed7e058d36058d01">RotationMatrix_Z</a>(<a class="code" href="class_hex_prism.html#a945593aab8e5d2d316caeaed8d495aff">rotationAngle</a>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 12; ++i) {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code" href="size_8hh.html#a0ae4b10cd6576f2ccf0da832de940dae">SIZE</a>; ++j) {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <a class="code" href="class_hex_prism.html#a708de8b82077ccf6cfa7b9e52baa885c">cuboidSystemCorners</a>[i][j] = <a class="code" href="class_hex_prism.html#acb7bbba783aa9e89be7d1486237e6039">localCorners</a>[i][j] * <a class="code" href="class_solid.html#a91d5693a13ab663717cb351731892cf4">scaleVector</a>[j];</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 12; ++i) {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <a class="code" href="class_hex_prism.html#a708de8b82077ccf6cfa7b9e52baa885c">cuboidSystemCorners</a>[i] = Rotation * <a class="code" href="class_hex_prism.html#a708de8b82077ccf6cfa7b9e52baa885c">cuboidSystemCorners</a>[i] + <a class="code" href="class_hex_prism.html#a590fa6cfe81c8814f6ff7cd3bc1a9a6c">location</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_hex_prism.html#aa0f0fd9288a171d404c059168b385a98">   69</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_hex_prism.html#aa0f0fd9288a171d404c059168b385a98">HexPrism::Rotate</a>(<span class="keywordtype">double</span> angle) {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="class_hex_prism.html#a945593aab8e5d2d316caeaed8d495aff">rotationAngle</a> &gt; 360)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <a class="code" href="class_hex_prism.html#a945593aab8e5d2d316caeaed8d495aff">rotationAngle</a> =- 360;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="class_hex_prism.html#a945593aab8e5d2d316caeaed8d495aff">rotationAngle</a> += angle;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="class_hex_prism.html#a6b2633febb5bcc85c800771ffe994dcd">   77</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="class_hex_prism.html#a6b2633febb5bcc85c800771ffe994dcd">HexPrism::GetAngle</a>() {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_hex_prism.html#a945593aab8e5d2d316caeaed8d495aff">rotationAngle</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="class_hex_prism.html#af4a20be61d339b4d10a54a190a8863b4">   83</a></span>&#160;<a class="code" href="class_vector.html">Vector3D</a>* <a class="code" href="class_hex_prism.html#af4a20be61d339b4d10a54a190a8863b4">HexPrism::GetLocalCorners</a>() {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_hex_prism.html#acb7bbba783aa9e89be7d1486237e6039">localCorners</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_hex_prism_html_a590fa6cfe81c8814f6ff7cd3bc1a9a6c"><div class="ttname"><a href="class_hex_prism.html#a590fa6cfe81c8814f6ff7cd3bc1a9a6c">HexPrism::location</a></div><div class="ttdeci">Vector3D location</div><div class="ttdoc">Wektor reprezentujacy polozenie w ukladzie rodzica.</div><div class="ttdef"><b>Definition:</b> <a href="hexagonal__prism_8hh_source.html#l00044">hexagonal_prism.hh:44</a></div></div>
+<div class="ttc" id="aclass_hex_prism_html_a708de8b82077ccf6cfa7b9e52baa885c"><div class="ttname"><a href="class_hex_prism.html#a708de8b82077ccf6cfa7b9e52baa885c">HexPrism::cuboidSystemCorners</a></div><div class="ttdeci">Vector3D cuboidSystemCorners[12]</div><div class="ttdoc">Jednowymiarowa tablica typu Vector3D reprezentujaca wspolrzedne wierzcholkow w ukladzie rodzica.</div><div class="ttdef"><b>Definition:</b> <a href="hexagonal__prism_8hh_source.html#l00030">hexagonal_prism.hh:30</a></div></div>
+<div class="ttc" id="aclass_hex_prism_html_a945593aab8e5d2d316caeaed8d495aff"><div class="ttname"><a href="class_hex_prism.html#a945593aab8e5d2d316caeaed8d495aff">HexPrism::rotationAngle</a></div><div class="ttdeci">double rotationAngle</div><div class="ttdoc">Zmienna typu double przetrzymujaca wartosc kata calkowitego obrotu rotora.</div><div class="ttdef"><b>Definition:</b> <a href="hexagonal__prism_8hh_source.html#l00051">hexagonal_prism.hh:51</a></div></div>
+<div class="ttc" id="aclass_hex_prism_html_af4a20be61d339b4d10a54a190a8863b4"><div class="ttname"><a href="class_hex_prism.html#af4a20be61d339b4d10a54a190a8863b4">HexPrism::GetLocalCorners</a></div><div class="ttdeci">Vector3D * GetLocalCorners()</div><div class="ttdoc">Metoda zwracajaca tablice localCorners.</div><div class="ttdef"><b>Definition:</b> <a href="hexagonal__prism_8cpp_source.html#l00083">hexagonal_prism.cpp:83</a></div></div>
+<div class="ttc" id="amatrix3_d_8hh_html_abb063b994dec3955ed7e058d36058d01"><div class="ttname"><a href="matrix3_d_8hh.html#abb063b994dec3955ed7e058d36058d01">RotationMatrix_Z</a></div><div class="ttdeci">Matrix3D RotationMatrix_Z(const double angle)</div><div class="ttdoc">Funkcja wypełniająca macierz odpowiendimi wartościami, które tworzą macierz rotacji w osi OZ.</div><div class="ttdef"><b>Definition:</b> <a href="matrix3_d_8cpp_source.html#l00009">matrix3D.cpp:9</a></div></div>
+<div class="ttc" id="aclass_solid_html_a91d5693a13ab663717cb351731892cf4"><div class="ttname"><a href="class_solid.html#a91d5693a13ab663717cb351731892cf4">Solid::scaleVector</a></div><div class="ttdeci">Vector3D scaleVector</div><div class="ttdoc">Vector3D przetrzymujacy wartosci skali w osiach X Y Z.</div><div class="ttdef"><b>Definition:</b> <a href="solid_8hh_source.html#l00030">solid.hh:30</a></div></div>
+<div class="ttc" id="aclass_hex_prism_html_a08e470dbf02c086c1a5151758c092018"><div class="ttname"><a href="class_hex_prism.html#a08e470dbf02c086c1a5151758c092018">HexPrism::HexPrism</a></div><div class="ttdeci">HexPrism()</div><div class="ttdoc">Konstruktor bezparametryczny klasy HexPrism  Tworzy prostopadloscian szesciokatny o dlugosci krawedzi...</div><div class="ttdef"><b>Definition:</b> <a href="hexagonal__prism_8cpp_source.html#l00009">hexagonal_prism.cpp:9</a></div></div>
+<div class="ttc" id="aclass_hex_prism_html_aa0f0fd9288a171d404c059168b385a98"><div class="ttname"><a href="class_hex_prism.html#aa0f0fd9288a171d404c059168b385a98">HexPrism::Rotate</a></div><div class="ttdeci">void Rotate(double angle)</div><div class="ttdoc">Metoda aktualizujaca wartosc calkowitego kata obrotu.</div><div class="ttdef"><b>Definition:</b> <a href="hexagonal__prism_8cpp_source.html#l00069">hexagonal_prism.cpp:69</a></div></div>
+<div class="ttc" id="aclass_hex_prism_html_a6b2633febb5bcc85c800771ffe994dcd"><div class="ttname"><a href="class_hex_prism.html#a6b2633febb5bcc85c800771ffe994dcd">HexPrism::GetAngle</a></div><div class="ttdeci">double GetAngle()</div><div class="ttdoc">Metoda zwracajaca wartosc kata calkowitego obrotu.</div><div class="ttdef"><b>Definition:</b> <a href="hexagonal__prism_8cpp_source.html#l00077">hexagonal_prism.cpp:77</a></div></div>
+<div class="ttc" id="ahexagonal__prism_8hh_html"><div class="ttname"><a href="hexagonal__prism_8hh.html">hexagonal_prism.hh</a></div><div class="ttdoc">Plik zawierajacy definicje klasy HexPrism.</div></div>
+<div class="ttc" id="asize_8hh_html_a0ae4b10cd6576f2ccf0da832de940dae"><div class="ttname"><a href="size_8hh.html#a0ae4b10cd6576f2ccf0da832de940dae">SIZE</a></div><div class="ttdeci">constexpr int SIZE</div><div class="ttdef"><b>Definition:</b> <a href="size_8hh_source.html#l00003">size.hh:3</a></div></div>
+<div class="ttc" id="aclass_hex_prism_html_acb7bbba783aa9e89be7d1486237e6039"><div class="ttname"><a href="class_hex_prism.html#acb7bbba783aa9e89be7d1486237e6039">HexPrism::localCorners</a></div><div class="ttdeci">Vector3D localCorners[12]</div><div class="ttdoc">Jendowymiarowa tablica typu Vector3D reprezentujaca lokalne wspolrzedne wierzcholkow.</div><div class="ttdef"><b>Definition:</b> <a href="hexagonal__prism_8hh_source.html#l00023">hexagonal_prism.hh:23</a></div></div>
+<div class="ttc" id="aclass_vector_html"><div class="ttname"><a href="class_vector.html">Vector&lt; 3 &gt;</a></div></div>
+<div class="ttc" id="aclass_hex_prism_html_a8e3abae889a3d22936ccca0c2324c24c"><div class="ttname"><a href="class_hex_prism.html#a8e3abae889a3d22936ccca0c2324c24c">HexPrism::globalCorners</a></div><div class="ttdeci">Vector3D globalCorners[12]</div><div class="ttdoc">Jednowymiarowa tablica typu Vector3D reprezentujaca globalne wspolrzedne wierzcholkow.</div><div class="ttdef"><b>Definition:</b> <a href="hexagonal__prism_8hh_source.html#l00037">hexagonal_prism.hh:37</a></div></div>
+<div class="ttc" id="aclass_hex_prism_html_a7c580cc9f46d09f2e841be9f3aaf6c77"><div class="ttname"><a href="class_hex_prism.html#a7c580cc9f46d09f2e841be9f3aaf6c77">HexPrism::operator[]</a></div><div class="ttdeci">Vector3D &amp; operator[](int index)</div><div class="ttdoc">Przeciazenie operatora indeksowania dla zapisu wspolrzednych globalnych wierzcholkow.</div><div class="ttdef"><b>Definition:</b> <a href="hexagonal__prism_8cpp_source.html#l00040">hexagonal_prism.cpp:40</a></div></div>
+<div class="ttc" id="aclass_hex_prism_html_afca474c9f7c50dc1e245e864e38d5156"><div class="ttname"><a href="class_hex_prism.html#afca474c9f7c50dc1e245e864e38d5156">HexPrism::ToCubeSystem</a></div><div class="ttdeci">void ToCubeSystem(Vector3D &amp;Translation)</div><div class="ttdoc">Metoda obliczajaca wspolrzedne prostopadloscianu szesciokatnego w ukladzie wpsolrzednym rodzica.</div><div class="ttdef"><b>Definition:</b> <a href="hexagonal__prism_8cpp_source.html#l00048">hexagonal_prism.cpp:48</a></div></div>
+<div class="ttc" id="aclass_matrix_html"><div class="ttname"><a href="class_matrix.html">Matrix</a></div><div class="ttdoc">Szablon klasy Matrix.</div><div class="ttdef"><b>Definition:</b> <a href="matrix_8hh_source.html#l00024">matrix.hh:24</a></div></div>
+<div class="ttc" id="aclass_hex_prism_html_abc9a5e5daeb94f744a5a19189d7cc0ad"><div class="ttname"><a href="class_hex_prism.html#abc9a5e5daeb94f744a5a19189d7cc0ad">HexPrism::operator()</a></div><div class="ttdeci">Vector3D &amp; operator()(int index)</div><div class="ttdoc">Przeciazenie operatora funkcyjnego dla zapisu wartosci lokalnych wierzcholkow.</div><div class="ttdef"><b>Definition:</b> <a href="hexagonal__prism_8cpp_source.html#l00032">hexagonal_prism.cpp:32</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="hexagonal__prism_8cpp.html">hexagonal_prism.cpp</a></li>
+    <li class="footer">Wygenerowano przez
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

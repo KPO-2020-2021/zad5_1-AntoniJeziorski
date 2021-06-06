@@ -1,0 +1,14 @@
+<map id="inc/hexagonal_prism.hh" name="inc/hexagonal_prism.hh">
+<area shape="rect" id="node1" title="Plik zawierajacy definicje klasy HexPrism." alt="" coords="189,5,366,32"/>
+<area shape="rect" id="node2" href="$solid_8hh.html" title="Plik zawierający definicję klasy Solid." alt="" coords="185,80,258,107"/>
+<area shape="rect" id="node9" href="$matrix3_d_8hh.html" title="Plik zawierający definicję klasy Matrix3D." alt="" coords="310,80,413,107"/>
+<area shape="rect" id="node3" href="$vector3_d_8hh.html" title="Plik zawierający definicję klasy Vector3D." alt="" coords="171,155,272,181"/>
+<area shape="rect" id="node5" href="$size_8hh.html" title=" " alt="" coords="293,304,361,331"/>
+<area shape="rect" id="node6" title=" " alt="" coords="89,304,169,331"/>
+<area shape="rect" id="node8" title=" " alt="" coords="5,155,64,181"/>
+<area shape="rect" id="node4" href="$vector_8hh.html" title="Plik zawierający definicję szablonu wektora." alt="" coords="189,229,272,256"/>
+<area shape="rect" id="node7" title=" " alt="" coords="193,304,268,331"/>
+<area shape="rect" id="node10" href="$matrix_8hh.html" title="Plik zawierający definicję szablonu macierzy." alt="" coords="347,155,432,181"/>
+<area shape="rect" id="node11" title=" " alt="" coords="486,229,551,256"/>
+<area shape="rect" id="node12" title=" " alt="" coords="347,229,410,256"/>
+</map>

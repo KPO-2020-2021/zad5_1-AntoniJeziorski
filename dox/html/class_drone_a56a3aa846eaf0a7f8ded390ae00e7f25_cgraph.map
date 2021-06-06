@@ -1,0 +1,6 @@
+<map id="Drone::RotorToGlobal" name="Drone::RotorToGlobal">
+<area shape="rect" id="node1" title="Metoda obliczajaca wspolrzedne globalne rotora." alt="" coords="5,56,165,83"/>
+<area shape="rect" id="node2" href="$class_cuboid.html#a4240058165986243295525580442e128" title="Metoda zwracajaca calkowity kat obrotu prostopadloscianu." alt="" coords="213,5,404,32"/>
+<area shape="rect" id="node3" href="$matrix3_d_8hh.html#abb063b994dec3955ed7e058d36058d01" title="Funkcja wypełniająca macierz odpowiendimi wartościami, które tworzą macierz rotacji w osi OZ." alt="" coords="452,81,587,108"/>
+<area shape="rect" id="node4" href="$class_hex_prism.html#afca474c9f7c50dc1e245e864e38d5156" title="Metoda obliczajaca wspolrzedne prostopadloscianu szesciokatnego w ukladzie wpsolrzednym rodzica." alt="" coords="214,107,403,133"/>
+</map>

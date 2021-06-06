@@ -18,7 +18,7 @@ Cuboid::Cuboid() {
     
 }
 
-void Cuboid::ToGlobal(Vector3D Translation) {
+void Cuboid::ToGlobal(Vector3D& Translation) {
 
     location = Translation;
 
@@ -37,6 +37,14 @@ void Cuboid::ToGlobal(Vector3D Translation) {
         globalCorners[i] = Rotation * globalCorners[i] + location;
     }
     
+}
+
+Vector3D &Cuboid::operator [] (int index) {
+
+    if (index < 0 || index >= CUBE) {
+        throw std::runtime_error("Error:  Blad ilosci wierzcholkow!");
+    }
+    return localCorners[index];
 }
 
 Vector3D &Cuboid::operator () (int index) {

@@ -1,0 +1,5 @@
+<map id="Graficzna hierarchia klas" name="Graficzna hierarchia klas">
+<area shape="rect" id="node1" href="$class_solid.html" title="Definicja klasy Solid." alt="" coords="5,31,60,57"/>
+<area shape="rect" id="node2" href="$class_cuboid.html" title="Definicja klasy Cuboid reprezentujaca prostopadloscian jako bryle geometryczna &#160;w trojwymiarowym ukla..." alt="" coords="117,5,184,32"/>
+<area shape="rect" id="node3" href="$class_hex_prism.html" title="Definicja klasy HexPrism dziedziczacej po klasie Solid modelujaca prostopadloscian szesciokatny w tro..." alt="" coords="108,56,193,83"/>
+</map>

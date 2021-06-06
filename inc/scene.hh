@@ -3,6 +3,7 @@
 /*!
  *
  * \file scene.hh
+ * 
  * \brief Plik zawierajacy definicje klasy Scene
  */
 

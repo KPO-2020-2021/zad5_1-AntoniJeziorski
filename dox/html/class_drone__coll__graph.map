@@ -1,0 +1,7 @@
+<map id="Drone" name="Drone">
+<area shape="rect" id="node1" title="Definicja klasy Drone modelujacej drona w trojwymiarowych ukladzie wspolrzednych." alt="" coords="69,305,130,332"/>
+<area shape="rect" id="node2" href="$class_vector.html" title=" " alt="" coords="85,5,186,32"/>
+<area shape="rect" id="node3" href="$class_hex_prism.html" title="Definicja klasy HexPrism dziedziczacej po klasie Solid modelujaca prostopadloscian szesciokatny w tro..." alt="" coords="57,216,142,243"/>
+<area shape="rect" id="node4" href="$class_solid.html" title="Definicja klasy Solid." alt="" coords="220,111,275,137"/>
+<area shape="rect" id="node5" href="$class_cuboid.html" title="Definicja klasy Cuboid reprezentujaca prostopadloscian jako bryle geometryczna &#160;w trojwymiarowym ukla..." alt="" coords="214,216,281,243"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="Drone::Drone" name="Drone::Drone">
+<area shape="rect" id="node1" title="Konstruktor parametryczny klasy Drone." alt="" coords="5,31,113,57"/>
+<area shape="rect" id="node2" href="$class_solid.html#a67f02f29d97224fbff6d86ea2c5e483a" title="Metoda aktualizujaca wartosc skali." alt="" coords="178,5,275,32"/>
+<area shape="rect" id="node3" href="$class_cuboid.html#a6c363f6bd27a8da3ec0c46c83eb180ee" title="Metoda obliczajaca wspolrzedne globalne wierzcholkow prostopadloscianu." alt="" coords="161,56,292,83"/>
+<area shape="rect" id="node4" href="$matrix3_d_8hh.html#abb063b994dec3955ed7e058d36058d01" title="Funkcja wypełniająca macierz odpowiendimi wartościami, które tworzą macierz rotacji w osi OZ." alt="" coords="340,56,475,83"/>
+</map>

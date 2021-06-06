@@ -1,0 +1,8 @@
+<map id="Drone::SaveRotor" name="Drone::SaveRotor">
+<area shape="rect" id="node1" title="Metoda zapisuja rotor do pliku." alt="" coords="673,78,809,105"/>
+<area shape="rect" id="node2" href="$class_drone.html#ac802f8ea993d0a79a8407e4b9496c675" title="Metoda zapisujaca drona do plikow &#160;Wywoluje funkcje SaveBody i SaveDrone." alt="" coords="485,78,625,105"/>
+<area shape="rect" id="node3" href="$class_drone.html#a17966e2db825caf84830b227e8a205e0" title="Metoda realizujaca lot poziomy drona." alt="" coords="264,27,437,54"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,53,60,79"/>
+<area shape="rect" id="node6" href="$class_drone.html#ab02fd50346da5007b0c0d7de073843a4" title="Metoda realizujaca lot pionowy drona." alt="" coords="273,78,428,105"/>
+<area shape="rect" id="node5" href="$class_drone.html#a58b3f97c7e76a862bac36e7dde14d0ef" title="Metoda realizujaca zwiad drona." alt="" coords="108,27,216,54"/>
+</map>

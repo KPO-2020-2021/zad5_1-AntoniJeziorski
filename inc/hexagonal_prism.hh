@@ -4,7 +4,13 @@
 /*!
  *
  * \file hexagonal_prism.hh
+ * 
  * \brief Plik zawierajacy definicje klasy HexPrism
+ */
+
+/*!
+ *
+ * \brief Definicja klasy HexPrism dziedziczacej po klasie Solid modelujaca prostopadloscian szesciokatny w trojwymiarowym ukladzie wspolrzednych
  */
 
 class HexPrism: public Solid {
@@ -58,7 +64,7 @@ class HexPrism: public Solid {
          * \brief Metoda obliczajaca wspolrzedne prostopadloscianu szesciokatnego w ukladzie wpsolrzednym rodzica
          */
 
-        void  ToCubeSystem(Vector3D Translation);
+        void  ToCubeSystem(Vector3D& Translation);
 
         /*!
          *
@@ -91,5 +97,23 @@ class HexPrism: public Solid {
          */
 
         void Rotate(double angle); 
+
+        /*!
+         *
+         * \brief Metoda zwracajaca wartosc kata calkowitego obrotu
+         * 
+         * \return Kat calkowitego obrotu jako zmienna typu double
+         */
+
+        double GetAngle();
+
+        /*!
+         *
+         * \brief Metoda zwracajaca tablice localCorners
+         * 
+         * \return Wskaznik na pierwszy element tablicy localCorners
+         */
+
+        Vector3D* GetLocalCorners();
 
 };

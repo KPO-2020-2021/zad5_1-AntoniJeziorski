@@ -1,0 +1,4 @@
+<map id="Drone::PlanPath" name="Drone::PlanPath">
+<area shape="rect" id="node1" title="Metoda wyznaczajaca sciezke przelotu drona." alt="" coords="5,5,131,32"/>
+<area shape="rect" id="node2" href="$matrix3_d_8hh.html#abb063b994dec3955ed7e058d36058d01" title="Funkcja wypełniająca macierz odpowiendimi wartościami, które tworzą macierz rotacji w osi OZ." alt="" coords="179,5,313,32"/>
+</map>

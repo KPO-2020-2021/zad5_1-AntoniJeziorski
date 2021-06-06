@@ -1,0 +1,5 @@
+<map id="Drone::SaveBody" name="Drone::SaveBody">
+<area shape="rect" id="node1" title="Metoda zapisujaca korpus drona do pliku." alt="" coords="5,5,140,32"/>
+<area shape="rect" id="node2" href="$class_cuboid.html#a6c363f6bd27a8da3ec0c46c83eb180ee" title="Metoda obliczajaca wspolrzedne globalne wierzcholkow prostopadloscianu." alt="" coords="188,5,319,32"/>
+<area shape="rect" id="node3" href="$matrix3_d_8hh.html#abb063b994dec3955ed7e058d36058d01" title="Funkcja wypełniająca macierz odpowiendimi wartościami, które tworzą macierz rotacji w osi OZ." alt="" coords="367,5,501,32"/>
+</map>

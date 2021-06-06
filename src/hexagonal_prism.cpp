@@ -45,7 +45,7 @@ Vector3D &HexPrism::operator [] (int index) {
     return globalCorners[index];
 }
 
-void HexPrism::ToCubeSystem(Vector3D Translation) {
+void HexPrism::ToCubeSystem(Vector3D& Translation) {
     
     location = Translation;
 
@@ -64,12 +64,24 @@ void HexPrism::ToCubeSystem(Vector3D Translation) {
         cuboidSystemCorners[i] = Rotation * cuboidSystemCorners[i] + location;
     }
 
-} 
+}
 
 void HexPrism::Rotate(double angle) {
 
     if(rotationAngle > 360)
         rotationAngle =- 360;
     rotationAngle += angle;
+
+}
+
+double HexPrism::GetAngle() {
+
+    return rotationAngle;
+
+}
+
+Vector3D* HexPrism::GetLocalCorners() {
+
+    return localCorners;
 
 }

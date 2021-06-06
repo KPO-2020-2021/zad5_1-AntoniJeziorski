@@ -6,6 +6,7 @@
 /*!
  *
  * \file cuboid.hh
+ * 
  * \brief Plik zawierajacy definicje klasy Cuboid
  */
 
@@ -61,7 +62,7 @@ class Cuboid: public Solid {
          * \param Translation - wektor polozenia srodka prostopadloscianu w ukladzie rodzica
          */
 
-        void ToGlobal(Vector3D Translation);
+        void ToGlobal(Vector3D& Translation);
     
         /*!
          *
@@ -73,6 +74,17 @@ class Cuboid: public Solid {
          */
 
         Vector3D &operator () (int index);
+
+        /*!
+         *
+         * \brief Przeciazenie operatora indeksujacego
+         * 
+         * \param index - indeks wierzcholka
+         * 
+         * \return Wektor reprezentujacy wspolrzedne lokalne wierzcholka
+         */
+
+        Vector3D &operator [] (int index);
 
         /*!
          *
@@ -102,3 +114,4 @@ class Cuboid: public Solid {
         double GetRotationAngle();
 
 };
+

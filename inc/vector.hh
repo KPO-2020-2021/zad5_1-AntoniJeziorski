@@ -27,9 +27,9 @@ class Vector {
 
     double size[Size];
 
-    static int actualVectorAmount;
+    static unsigned long long int actualVectorAmount;
 
-    static int allVectorAmount;
+    static unsigned long long int allVectorAmount;
 
     public:
 
@@ -151,7 +151,7 @@ class Vector {
          * \return Aktualna liczba wektorow
          */
 
-        static int getActualVectorAmount();
+        static unsigned long long int getActualVectorAmount();
 
         /*!
          *
@@ -160,24 +160,68 @@ class Vector {
          * \return Calkowita liczba wektorow
          */
 
-        static int getAllVectorAmount();
+        static unsigned long long int getAllVectorAmount();
+
+        /*!
+         *
+         * \brief Konstruktor kopiujacy klasy Vector
+         * 
+         * \param tmp - wektor kopiowany
+         */
+
+        Vector(const Vector& tmp);
+
+        /*!
+         *
+         * \brief Przeciazenie operatora przypisania dla klasy Vector
+         * 
+         * \param tmp - wektor przypisywany
+         */
+
+        Vector& operator = (const Vector& tmp);
 };
 
 template <unsigned int Size>
-int Vector<Size>::allVectorAmount;
+unsigned long long int Vector<Size>::allVectorAmount;
 
 template <unsigned int Size>
-int Vector<Size>::actualVectorAmount;
+unsigned long long int Vector<Size>::actualVectorAmount;
 
 
 template <unsigned int Size>
-int Vector<Size>::getActualVectorAmount() {
+unsigned long long int Vector<Size>::getActualVectorAmount() {
+
     return actualVectorAmount;
+
 }
 
 template <unsigned int Size>
-int Vector<Size>::getAllVectorAmount() {
+unsigned long long int Vector<Size>::getAllVectorAmount() {
+
     return allVectorAmount;
+
+}
+
+template <unsigned int Size>
+Vector<Size>& Vector<Size>::operator = (const Vector<Size>& tmp) {
+
+    for(unsigned int i = 0; i < Size; ++i) {
+
+        size[i] = tmp[i];
+
+    }
+
+    return *this;
+
+}
+
+template <unsigned int Size>
+Vector<Size>::Vector(const Vector<Size>& tmp) {
+
+    ++allVectorAmount;
+    ++actualVectorAmount; 
+    *this = tmp;
+    
 }
 
 /*!

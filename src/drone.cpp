@@ -6,11 +6,9 @@
  * \brief Plik zawierajace definicje metod klasy Drone
  */
 
-Drone::Drone() {
+Drone::Drone() {}
 
-}
-
-Drone::Drone(Vector3D bodyScale, Vector3D rotorScale, Vector3D loc) {
+Drone::Drone(Vector3D& bodyScale, Vector3D& rotorScale, Vector3D& loc) {
     
     location = loc;
     body.Scale(bodyScale);
@@ -51,7 +49,7 @@ bool Drone::SaveBody(int droneNumber) {
     return !FileStream.fail();
 }
 
-void Drone::RotorToGlobal(int rotorNumber, Vector3D Translation) {
+void Drone::RotorToGlobal(int rotorNumber, Vector3D& Translation) {
 
     rotor[rotorNumber].ToCubeSystem(Translation);
 
@@ -64,7 +62,7 @@ void Drone::RotorToGlobal(int rotorNumber, Vector3D Translation) {
 
 }
 
-bool Drone::SaveRotor(int droneNumber, int rotorNumber, Vector3D Translation) {
+bool Drone::SaveRotor(int droneNumber, int rotorNumber, Vector3D& Translation) {
 
     RotorToGlobal(rotorNumber, Translation);
 
@@ -113,7 +111,7 @@ void Drone::SaveDrone(int droneNumber) {
     
 }
 
-void Drone::VerticalFlight(Vector3D translation, PzG::LaczeDoGNUPlota& Link, int droneNumber) {
+void Drone::VerticalFlight(Vector3D& translation, PzG::LaczeDoGNUPlota& Link, int droneNumber) {
 
     for (int i = 0; i < FLOPS; i++) {
     
@@ -263,4 +261,17 @@ void Drone::Recce(int droneNumber, PzG::LaczeDoGNUPlota& Link) {
 
 }
 
+HexPrism &Drone::operator [] (int index) {
+
+    if (index < 0 || index >= 4) {
+        throw std::runtime_error("Error:  Blad ilosci rotorow!");
+    }
+    return rotor[index];
+}
+
+Vector3D Drone::GetLocation() const {
+
+    return location;
+
+}
 

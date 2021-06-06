@@ -9,7 +9,13 @@
 /*!
  *
  * \file drone.hh
+ * 
  * \brief Plik zawierajacy definicje klasy Drone
+ */
+
+/*!
+ *
+ * \brief Definicja klasy Drone modelujacej drona w trojwymiarowych ukladzie wspolrzednych
  */
 
 class Drone {
@@ -62,7 +68,7 @@ class Drone {
          * \param loc - wspolrzedne poczatkowe drona
          */
 
-        Drone(Vector3D scale, Vector3D rotorScale, Vector3D loc);
+        Drone(Vector3D& scale, Vector3D& rotorScale, Vector3D& loc);
 
         /*!
          *
@@ -88,7 +94,7 @@ class Drone {
          * \return true jesli operacja sie powiedzie\n false jesli operacja sie nie powiedzie
          */
 
-        bool SaveRotor(int droneNumber, int rotorNumber, Vector3D Translation);
+        bool SaveRotor(int droneNumber, int rotorNumber, Vector3D& Translation);
 
         /*!
          *
@@ -110,7 +116,7 @@ class Drone {
          * \param droneNumber - numer drona
          */
 
-        void VerticalFlight(Vector3D translation, PzG::LaczeDoGNUPlota& Link, int droneNumber);
+        void VerticalFlight(Vector3D& translation, PzG::LaczeDoGNUPlota& Link, int droneNumber);
 
         /*!
          *
@@ -147,7 +153,7 @@ class Drone {
          * \param Translation - przesuniecie rotora wzgledem ukladu korpusu
          */
 
-        void RotorToGlobal(int rotorNumber, Vector3D Translation);
+        void RotorToGlobal(int rotorNumber, Vector3D& Translation);
 
         /*!
          *
@@ -159,5 +165,25 @@ class Drone {
          */
 
         void Recce(int droneNumber,  PzG::LaczeDoGNUPlota& Link);
+
+        /*!
+         *
+         * \brief Przeciazenie operatora indeksowania dla zapisu rotora
+         * 
+         * \param index - indeks rotora
+         * 
+         * \return rotor jako obiekt klasy HexPrism o podanym indeksie
+         */
+
+        HexPrism &operator [] (int index);
+
+        /*!
+         *
+         * \brief Metoda zwracajaca polozenie drona
+         * 
+         * \return Polozenie drona jako const Vector3D
+         */
+
+        Vector3D GetLocation() const;
 
 };
