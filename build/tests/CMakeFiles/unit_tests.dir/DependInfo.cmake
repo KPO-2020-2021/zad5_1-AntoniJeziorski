@@ -4,8 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/tests/dummy.cpp" "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/tests/CMakeFiles/unit_tests.dir/dummy.cpp.o"
   "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/tests/main.cpp" "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/tests/CMakeFiles/unit_tests.dir/main.cpp.o"
+  "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/tests/test_cuboid.cpp" "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/tests/CMakeFiles/unit_tests.dir/test_cuboid.cpp.o"
+  "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/tests/test_drone.cpp" "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/tests/CMakeFiles/unit_tests.dir/test_drone.cpp.o"
+  "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/tests/test_hexagonal_prism.cpp" "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/tests/CMakeFiles/unit_tests.dir/test_hexagonal_prism.cpp.o"
+  "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/tests/test_matrix3D.cpp" "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/tests/CMakeFiles/unit_tests.dir/test_matrix3D.cpp.o"
+  "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/tests/test_solid.cpp" "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/tests/CMakeFiles/unit_tests.dir/test_solid.cpp.o"
+  "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/tests/test_vector3D.cpp" "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/tests/CMakeFiles/unit_tests.dir/test_vector3D.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

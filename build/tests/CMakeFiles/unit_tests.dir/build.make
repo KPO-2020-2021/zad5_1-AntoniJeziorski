@@ -70,23 +70,93 @@ tests/CMakeFiles/unit_tests.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/unit_tests.dir/main.cpp.s"
 	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/tests/main.cpp -o CMakeFiles/unit_tests.dir/main.cpp.s
 
-tests/CMakeFiles/unit_tests.dir/dummy.cpp.o: tests/CMakeFiles/unit_tests.dir/flags.make
-tests/CMakeFiles/unit_tests.dir/dummy.cpp.o: ../tests/dummy.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object tests/CMakeFiles/unit_tests.dir/dummy.cpp.o"
-	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/tests && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/unit_tests.dir/dummy.cpp.o -c /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/tests/dummy.cpp
+tests/CMakeFiles/unit_tests.dir/test_matrix3D.cpp.o: tests/CMakeFiles/unit_tests.dir/flags.make
+tests/CMakeFiles/unit_tests.dir/test_matrix3D.cpp.o: ../tests/test_matrix3D.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object tests/CMakeFiles/unit_tests.dir/test_matrix3D.cpp.o"
+	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/tests && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/unit_tests.dir/test_matrix3D.cpp.o -c /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/tests/test_matrix3D.cpp
 
-tests/CMakeFiles/unit_tests.dir/dummy.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/unit_tests.dir/dummy.cpp.i"
-	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/tests/dummy.cpp > CMakeFiles/unit_tests.dir/dummy.cpp.i
+tests/CMakeFiles/unit_tests.dir/test_matrix3D.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/unit_tests.dir/test_matrix3D.cpp.i"
+	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/tests/test_matrix3D.cpp > CMakeFiles/unit_tests.dir/test_matrix3D.cpp.i
 
-tests/CMakeFiles/unit_tests.dir/dummy.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/unit_tests.dir/dummy.cpp.s"
-	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/tests/dummy.cpp -o CMakeFiles/unit_tests.dir/dummy.cpp.s
+tests/CMakeFiles/unit_tests.dir/test_matrix3D.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/unit_tests.dir/test_matrix3D.cpp.s"
+	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/tests/test_matrix3D.cpp -o CMakeFiles/unit_tests.dir/test_matrix3D.cpp.s
+
+tests/CMakeFiles/unit_tests.dir/test_vector3D.cpp.o: tests/CMakeFiles/unit_tests.dir/flags.make
+tests/CMakeFiles/unit_tests.dir/test_vector3D.cpp.o: ../tests/test_vector3D.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object tests/CMakeFiles/unit_tests.dir/test_vector3D.cpp.o"
+	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/tests && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/unit_tests.dir/test_vector3D.cpp.o -c /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/tests/test_vector3D.cpp
+
+tests/CMakeFiles/unit_tests.dir/test_vector3D.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/unit_tests.dir/test_vector3D.cpp.i"
+	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/tests/test_vector3D.cpp > CMakeFiles/unit_tests.dir/test_vector3D.cpp.i
+
+tests/CMakeFiles/unit_tests.dir/test_vector3D.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/unit_tests.dir/test_vector3D.cpp.s"
+	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/tests/test_vector3D.cpp -o CMakeFiles/unit_tests.dir/test_vector3D.cpp.s
+
+tests/CMakeFiles/unit_tests.dir/test_solid.cpp.o: tests/CMakeFiles/unit_tests.dir/flags.make
+tests/CMakeFiles/unit_tests.dir/test_solid.cpp.o: ../tests/test_solid.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object tests/CMakeFiles/unit_tests.dir/test_solid.cpp.o"
+	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/tests && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/unit_tests.dir/test_solid.cpp.o -c /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/tests/test_solid.cpp
+
+tests/CMakeFiles/unit_tests.dir/test_solid.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/unit_tests.dir/test_solid.cpp.i"
+	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/tests/test_solid.cpp > CMakeFiles/unit_tests.dir/test_solid.cpp.i
+
+tests/CMakeFiles/unit_tests.dir/test_solid.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/unit_tests.dir/test_solid.cpp.s"
+	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/tests/test_solid.cpp -o CMakeFiles/unit_tests.dir/test_solid.cpp.s
+
+tests/CMakeFiles/unit_tests.dir/test_cuboid.cpp.o: tests/CMakeFiles/unit_tests.dir/flags.make
+tests/CMakeFiles/unit_tests.dir/test_cuboid.cpp.o: ../tests/test_cuboid.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object tests/CMakeFiles/unit_tests.dir/test_cuboid.cpp.o"
+	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/tests && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/unit_tests.dir/test_cuboid.cpp.o -c /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/tests/test_cuboid.cpp
+
+tests/CMakeFiles/unit_tests.dir/test_cuboid.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/unit_tests.dir/test_cuboid.cpp.i"
+	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/tests/test_cuboid.cpp > CMakeFiles/unit_tests.dir/test_cuboid.cpp.i
+
+tests/CMakeFiles/unit_tests.dir/test_cuboid.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/unit_tests.dir/test_cuboid.cpp.s"
+	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/tests/test_cuboid.cpp -o CMakeFiles/unit_tests.dir/test_cuboid.cpp.s
+
+tests/CMakeFiles/unit_tests.dir/test_hexagonal_prism.cpp.o: tests/CMakeFiles/unit_tests.dir/flags.make
+tests/CMakeFiles/unit_tests.dir/test_hexagonal_prism.cpp.o: ../tests/test_hexagonal_prism.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object tests/CMakeFiles/unit_tests.dir/test_hexagonal_prism.cpp.o"
+	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/tests && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/unit_tests.dir/test_hexagonal_prism.cpp.o -c /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/tests/test_hexagonal_prism.cpp
+
+tests/CMakeFiles/unit_tests.dir/test_hexagonal_prism.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/unit_tests.dir/test_hexagonal_prism.cpp.i"
+	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/tests/test_hexagonal_prism.cpp > CMakeFiles/unit_tests.dir/test_hexagonal_prism.cpp.i
+
+tests/CMakeFiles/unit_tests.dir/test_hexagonal_prism.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/unit_tests.dir/test_hexagonal_prism.cpp.s"
+	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/tests/test_hexagonal_prism.cpp -o CMakeFiles/unit_tests.dir/test_hexagonal_prism.cpp.s
+
+tests/CMakeFiles/unit_tests.dir/test_drone.cpp.o: tests/CMakeFiles/unit_tests.dir/flags.make
+tests/CMakeFiles/unit_tests.dir/test_drone.cpp.o: ../tests/test_drone.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object tests/CMakeFiles/unit_tests.dir/test_drone.cpp.o"
+	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/tests && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/unit_tests.dir/test_drone.cpp.o -c /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/tests/test_drone.cpp
+
+tests/CMakeFiles/unit_tests.dir/test_drone.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/unit_tests.dir/test_drone.cpp.i"
+	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/tests/test_drone.cpp > CMakeFiles/unit_tests.dir/test_drone.cpp.i
+
+tests/CMakeFiles/unit_tests.dir/test_drone.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/unit_tests.dir/test_drone.cpp.s"
+	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/tests/test_drone.cpp -o CMakeFiles/unit_tests.dir/test_drone.cpp.s
 
 # Object files for target unit_tests
 unit_tests_OBJECTS = \
 "CMakeFiles/unit_tests.dir/main.cpp.o" \
-"CMakeFiles/unit_tests.dir/dummy.cpp.o"
+"CMakeFiles/unit_tests.dir/test_matrix3D.cpp.o" \
+"CMakeFiles/unit_tests.dir/test_vector3D.cpp.o" \
+"CMakeFiles/unit_tests.dir/test_solid.cpp.o" \
+"CMakeFiles/unit_tests.dir/test_cuboid.cpp.o" \
+"CMakeFiles/unit_tests.dir/test_hexagonal_prism.cpp.o" \
+"CMakeFiles/unit_tests.dir/test_drone.cpp.o"
 
 # External object files for target unit_tests
 unit_tests_EXTERNAL_OBJECTS = \
@@ -100,7 +170,12 @@ unit_tests_EXTERNAL_OBJECTS = \
 "/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/CMakeFiles/program.dir/src/hexagonal_prism.cpp.o"
 
 unit_tests: tests/CMakeFiles/unit_tests.dir/main.cpp.o
-unit_tests: tests/CMakeFiles/unit_tests.dir/dummy.cpp.o
+unit_tests: tests/CMakeFiles/unit_tests.dir/test_matrix3D.cpp.o
+unit_tests: tests/CMakeFiles/unit_tests.dir/test_vector3D.cpp.o
+unit_tests: tests/CMakeFiles/unit_tests.dir/test_solid.cpp.o
+unit_tests: tests/CMakeFiles/unit_tests.dir/test_cuboid.cpp.o
+unit_tests: tests/CMakeFiles/unit_tests.dir/test_hexagonal_prism.cpp.o
+unit_tests: tests/CMakeFiles/unit_tests.dir/test_drone.cpp.o
 unit_tests: CMakeFiles/program.dir/src/example.cpp.o
 unit_tests: CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o
 unit_tests: CMakeFiles/program.dir/src/cuboid.cpp.o
@@ -111,7 +186,7 @@ unit_tests: CMakeFiles/program.dir/src/scene.cpp.o
 unit_tests: CMakeFiles/program.dir/src/hexagonal_prism.cpp.o
 unit_tests: tests/CMakeFiles/unit_tests.dir/build.make
 unit_tests: tests/CMakeFiles/unit_tests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ../unit_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable ../unit_tests"
 	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/unit_tests.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

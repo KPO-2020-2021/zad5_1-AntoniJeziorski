@@ -166,33 +166,6 @@ unit_tests/fast:
 	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/build
 .PHONY : unit_tests/fast
 
-dummy.o: dummy.cpp.o
-
-.PHONY : dummy.o
-
-# target to build an object file
-dummy.cpp.o:
-	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/dummy.cpp.o
-.PHONY : dummy.cpp.o
-
-dummy.i: dummy.cpp.i
-
-.PHONY : dummy.i
-
-# target to preprocess a source file
-dummy.cpp.i:
-	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/dummy.cpp.i
-.PHONY : dummy.cpp.i
-
-dummy.s: dummy.cpp.s
-
-.PHONY : dummy.s
-
-# target to generate assembly for a file
-dummy.cpp.s:
-	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/dummy.cpp.s
-.PHONY : dummy.cpp.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -220,6 +193,168 @@ main.cpp.s:
 	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+test_cuboid.o: test_cuboid.cpp.o
+
+.PHONY : test_cuboid.o
+
+# target to build an object file
+test_cuboid.cpp.o:
+	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/test_cuboid.cpp.o
+.PHONY : test_cuboid.cpp.o
+
+test_cuboid.i: test_cuboid.cpp.i
+
+.PHONY : test_cuboid.i
+
+# target to preprocess a source file
+test_cuboid.cpp.i:
+	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/test_cuboid.cpp.i
+.PHONY : test_cuboid.cpp.i
+
+test_cuboid.s: test_cuboid.cpp.s
+
+.PHONY : test_cuboid.s
+
+# target to generate assembly for a file
+test_cuboid.cpp.s:
+	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/test_cuboid.cpp.s
+.PHONY : test_cuboid.cpp.s
+
+test_drone.o: test_drone.cpp.o
+
+.PHONY : test_drone.o
+
+# target to build an object file
+test_drone.cpp.o:
+	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/test_drone.cpp.o
+.PHONY : test_drone.cpp.o
+
+test_drone.i: test_drone.cpp.i
+
+.PHONY : test_drone.i
+
+# target to preprocess a source file
+test_drone.cpp.i:
+	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/test_drone.cpp.i
+.PHONY : test_drone.cpp.i
+
+test_drone.s: test_drone.cpp.s
+
+.PHONY : test_drone.s
+
+# target to generate assembly for a file
+test_drone.cpp.s:
+	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/test_drone.cpp.s
+.PHONY : test_drone.cpp.s
+
+test_hexagonal_prism.o: test_hexagonal_prism.cpp.o
+
+.PHONY : test_hexagonal_prism.o
+
+# target to build an object file
+test_hexagonal_prism.cpp.o:
+	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/test_hexagonal_prism.cpp.o
+.PHONY : test_hexagonal_prism.cpp.o
+
+test_hexagonal_prism.i: test_hexagonal_prism.cpp.i
+
+.PHONY : test_hexagonal_prism.i
+
+# target to preprocess a source file
+test_hexagonal_prism.cpp.i:
+	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/test_hexagonal_prism.cpp.i
+.PHONY : test_hexagonal_prism.cpp.i
+
+test_hexagonal_prism.s: test_hexagonal_prism.cpp.s
+
+.PHONY : test_hexagonal_prism.s
+
+# target to generate assembly for a file
+test_hexagonal_prism.cpp.s:
+	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/test_hexagonal_prism.cpp.s
+.PHONY : test_hexagonal_prism.cpp.s
+
+test_matrix3D.o: test_matrix3D.cpp.o
+
+.PHONY : test_matrix3D.o
+
+# target to build an object file
+test_matrix3D.cpp.o:
+	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/test_matrix3D.cpp.o
+.PHONY : test_matrix3D.cpp.o
+
+test_matrix3D.i: test_matrix3D.cpp.i
+
+.PHONY : test_matrix3D.i
+
+# target to preprocess a source file
+test_matrix3D.cpp.i:
+	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/test_matrix3D.cpp.i
+.PHONY : test_matrix3D.cpp.i
+
+test_matrix3D.s: test_matrix3D.cpp.s
+
+.PHONY : test_matrix3D.s
+
+# target to generate assembly for a file
+test_matrix3D.cpp.s:
+	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/test_matrix3D.cpp.s
+.PHONY : test_matrix3D.cpp.s
+
+test_solid.o: test_solid.cpp.o
+
+.PHONY : test_solid.o
+
+# target to build an object file
+test_solid.cpp.o:
+	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/test_solid.cpp.o
+.PHONY : test_solid.cpp.o
+
+test_solid.i: test_solid.cpp.i
+
+.PHONY : test_solid.i
+
+# target to preprocess a source file
+test_solid.cpp.i:
+	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/test_solid.cpp.i
+.PHONY : test_solid.cpp.i
+
+test_solid.s: test_solid.cpp.s
+
+.PHONY : test_solid.s
+
+# target to generate assembly for a file
+test_solid.cpp.s:
+	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/test_solid.cpp.s
+.PHONY : test_solid.cpp.s
+
+test_vector3D.o: test_vector3D.cpp.o
+
+.PHONY : test_vector3D.o
+
+# target to build an object file
+test_vector3D.cpp.o:
+	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/test_vector3D.cpp.o
+.PHONY : test_vector3D.cpp.o
+
+test_vector3D.i: test_vector3D.cpp.i
+
+.PHONY : test_vector3D.i
+
+# target to preprocess a source file
+test_vector3D.cpp.i:
+	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/test_vector3D.cpp.i
+.PHONY : test_vector3D.cpp.i
+
+test_vector3D.s: test_vector3D.cpp.s
+
+.PHONY : test_vector3D.s
+
+# target to generate assembly for a file
+test_vector3D.cpp.s:
+	cd /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/test_vector3D.cpp.s
+.PHONY : test_vector3D.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -232,12 +367,27 @@ help:
 	@echo "... fulltest"
 	@echo "... coverage"
 	@echo "... unit_tests"
-	@echo "... dummy.o"
-	@echo "... dummy.i"
-	@echo "... dummy.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... test_cuboid.o"
+	@echo "... test_cuboid.i"
+	@echo "... test_cuboid.s"
+	@echo "... test_drone.o"
+	@echo "... test_drone.i"
+	@echo "... test_drone.s"
+	@echo "... test_hexagonal_prism.o"
+	@echo "... test_hexagonal_prism.i"
+	@echo "... test_hexagonal_prism.s"
+	@echo "... test_matrix3D.o"
+	@echo "... test_matrix3D.i"
+	@echo "... test_matrix3D.s"
+	@echo "... test_solid.o"
+	@echo "... test_solid.i"
+	@echo "... test_solid.s"
+	@echo "... test_vector3D.o"
+	@echo "... test_vector3D.i"
+	@echo "... test_vector3D.s"
 .PHONY : help
 
 
