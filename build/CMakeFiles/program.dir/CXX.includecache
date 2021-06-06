@@ -82,17 +82,9 @@ iomanip
 vector.hh
 ../inc/vector.hh
 
-/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/src/cuboid.cpp
-cuboid.hh
-/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/src/cuboid.hh
-
 /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/src/drone.cpp
 drone.hh
 /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/src/drone.hh
-
-/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/src/hexagonal_prism.cpp
-hexagonal_prism.hh
-/home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/src/hexagonal_prism.hh
 
 /home/antek/Documents/PO/zad5/zad5_1-AntoniJeziorski/src/scene.cpp
 scene.hh
